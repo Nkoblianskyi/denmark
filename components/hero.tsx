@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-4 md:py-12 max-h-[200px] md:max-h-none overflow-hidden"
-      style={{ backgroundImage: "url('/placeholder.svg?height=600&width=1200&text=Casino+Background')" }}
+      style={{ backgroundImage: "url('/bg-3.png')" }}
     >
       {/* Black semi-transparent overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
