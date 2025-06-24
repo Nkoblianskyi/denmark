@@ -39,7 +39,7 @@ export function CasinoModal() {
               backgroundPosition: "center",
             }}
           >
-            EDITOR'S CHOICE THIS WEEK
+            <p className="mb-3">EDITOR'S CHOICE THIS WEEK</p>
           </div>
         </div>
 
