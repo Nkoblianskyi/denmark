@@ -217,8 +217,8 @@ export function CasinoRankings() {
                         </div>
 
                         {/* Rating under logo */}
-                        <div className="flex items-center justify-center gap-2">
-                          <div className="flex items-center">
+                        <div className="flex items-center justify-center gap-3">
+                          <div className="flex items-center gap-1">
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
@@ -227,7 +227,7 @@ export function CasinoRankings() {
                               />
                             ))}
                           </div>
-                          <span className="text-yellow-500 font-semibold text-base">{casino.rating}</span>
+                          <span className="text-yellow-500 font-semibold text-lg">{casino.rating}</span>
                         </div>
                       </div>
                     </div>
@@ -237,9 +237,9 @@ export function CasinoRankings() {
                       {/* Bonus */}
                       <div className="mb-4">
                         <div className="flex items-center justify-center gap-2 text-red-500 mb-3">
-                          <span className="text-xl font-medium"> WELCOME BONUS</span>
+                          <span className="text-xl font-medium">WELCOME BONUS</span>
                         </div>
-                        <div className="text-white font-bold text-2xl leading-tight">{casino.bonus}</div>
+                        <div className="text-white font-bold shadow-xl text-3xl leading-tight">{casino.bonus}</div>
                       </div>
                     </div>
 
@@ -249,7 +249,7 @@ export function CasinoRankings() {
                         <Badge
                           key={index}
                           variant="outline"
-                          className="border-red-900/70 text-gray-300 bg-red-950 text-xs px-3 py-2 text-center justify-center whitespace-nowrap w-32 opacity-100 relative z-10"
+                          className="border-red-900/70 text-gray-300 bg-red-950 text-sm px-3 py-2 text-center justify-center whitespace-nowrap w-36 opacity-100 relative z-10"
                         >
                           {feature}
                         </Badge>
