@@ -31,16 +31,16 @@ export function CasinoModal() {
         {/* Ribbon banner above card */}
         <div className="absolute  -left-8 -right-8 z-10">
           <div
-            className="relative text-black text-center py-4 px-8 font-bold text-sm shadow-lg bg-cover bg-center bg-no-repeat h-16 flex items-center justify-center w-full"
+            className="relative text-black text-center py-4 px-8 font-black text-lg shadow-lg bg-cover bg-center bg-no-repeat h-16 flex items-center justify-center w-full"
             style={{
-              backgroundImage: "url('/line.png')"
+              backgroundImage: "url('/images/ribbon-banner.png')",
             }}
           >
             EDITOR'S CHOICE THIS WEEK
           </div>
         </div>
 
-        <Card className="bg-gray-900 border-2 border-red-600 max-w-sm w-full relative overflow-hidden mt-8">
+        <Card className="bg-gray-900 border-2 border-red-600 max-w-md w-full relative overflow-hidden mt-8">
           <button
             onClick={(e) => {
               e.stopPropagation()
@@ -65,8 +65,10 @@ export function CasinoModal() {
 
             {/* Bonus */}
             <div className="mb-6">
-              <p className="text-gray-300 text-base mb-2">WELCOME BONUS</p>
-              <div className="text-2xl font-bold text-yellow-400 mb-1">{topCasino.bonus}</div>
+              <p className="text-white text-base mb-2">WELCOME BONUS</p>
+              <div className="text-2xl font-bold mb-1">
+                <span className="text-yellow-400">{topCasino.bonus}</span>
+              </div>
             </div>
 
             {/* Rating */}
@@ -84,7 +86,7 @@ export function CasinoModal() {
 
             {/* CTA Button */}
             <Button
-              className="w-full bg-yellow-500 hover:bg-green-600 text-white font-bold py-3 text-base"
+              className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 text-base"
               onClick={(e) => {
                 e.stopPropagation()
                 handleModalClick()
