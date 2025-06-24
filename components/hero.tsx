@@ -18,7 +18,7 @@ export function Hero() {
         </div>
 
         <p className="text-sm md:text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-md mb-3 md:mb-8 leading-tight">
-          Discover the best bonuses, fastest payouts and most trusted online casinos in Australia
+          Discover the best bonuses, fastest payouts and most trusted online casinos!
         </p>
 
         <div className="block md:hidden">
