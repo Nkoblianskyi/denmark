@@ -12,7 +12,7 @@ export function CasinoRankings() {
   }
 
   return (
-    <section id="rankings" className="py-16 bg-black">
+    <section id="rankings" className="py-4 bg-black">
       <div className="container mx-auto px-4">
         <div className="space-y-3 md:space-y-4">
           {casinos.map((casino) => (
