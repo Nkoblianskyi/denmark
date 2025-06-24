@@ -70,8 +70,7 @@ export function CasinoRankings() {
                     {/* Bonus */}
                     <div className="text-center flex-1 ml-4">
                       <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                        <Gift className="h-4 w-4" />
-                        <span className="text-sm font-medium">GET BONUS</span>
+                        <span className="text-sm font-medium">WELCOME BONU</span>
                       </div>
                       <div className="text-white font-bold text-lg leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded border border-yellow-400/30">
                         {casino.bonus}
@@ -167,7 +166,7 @@ export function CasinoRankings() {
                         <Badge
                           key={index}
                           variant="outline"
-                          className="border-red-900/70 text-gray-300 bg-red-950 text-xs px-2 py-1 text-center justify-center whitespace-nowrap w-32 opacity-100 relative z-10"
+                          className="border-red-900/70 text-gray-300 bg-red-950 text-xs px-2 py-1 text-center justify-center whitespace-nowrap w-32 opacity-100 relative z-10 font-bold"
                         >
                           {feature}
                         </Badge>
@@ -249,7 +248,7 @@ export function CasinoRankings() {
                         <Badge
                           key={index}
                           variant="outline"
-                          className="border-red-900/70 text-gray-300 bg-red-950 text-sm px-3 py-2 text-center justify-center whitespace-nowrap w-36 opacity-100 relative z-10"
+                          className="border-red-900/70 text-gray-300 bg-red-950 text-sm px-3 py-2 text-center justify-center whitespace-nowrap w-36 opacity-100 relative z-10 font-bold"
                         >
                           {feature}
                         </Badge>
