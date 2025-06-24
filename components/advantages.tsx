@@ -41,7 +41,7 @@ export function Advantages() {
                 {advantage.title === "Licensed & Safe" ? (
                   <Image src='/flag.png' width={24} height={24} alt={advantage.title} className="h-8 w-8" />
                 ) : (
-                  <advantage.icon className={`h-4 w-4 ${advantage.color}`} />
+                  <advantage.icon className={`h-8 w-8 ${advantage.color}`} />
                 )}
               </div>
               <h3 className="text-xs font-semibold text-white">{advantage.title}</h3>
