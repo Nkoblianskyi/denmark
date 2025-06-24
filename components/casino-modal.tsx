@@ -33,7 +33,7 @@ export function CasinoModal() {
           <div
             className="relative text-black text-center py-3 px-4 sm:py-4 sm:px-8 font-black text-sm sm:text-base md:text-lg shadow-lg h-12 sm:h-14 md:h-16 flex items-center justify-center w-full"
             style={{
-              backgroundImage: "url('/images/ribbon-banner.png')",
+              backgroundImage: "url('/line.png')",
               backgroundSize: "100% 100%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
