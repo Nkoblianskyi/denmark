@@ -71,7 +71,7 @@ export function CasinoRankings() {
                     <div className="text-center flex-1 ml-4">
                       <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
                         <Gift className="h-4 w-4" />
-                        <span className="text-sm font-medium">BONUS</span>
+                        <span className="text-sm font-medium">GET BONUS</span>
                       </div>
                       <div className="text-white font-bold text-lg leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded border border-yellow-400/30">
                         {casino.bonus}
@@ -105,7 +105,7 @@ export function CasinoRankings() {
                         handleCardClick(casino.url)
                       }}
                     >
-                      Claim Bonus
+                      GET BONUS
                     </Button>
                   </div>
                 </div>
@@ -268,7 +268,7 @@ export function CasinoRankings() {
                           handleCardClick(casino.url)
                         }}
                       >
-                        Claim
+                        GET BONUS
                       </Button>
                     </div>
                   </div>

@@ -33,7 +33,7 @@ export function CasinoModal() {
           <div
             className="relative text-black text-center py-4 px-8 font-black text-lg shadow-lg bg-cover bg-center bg-no-repeat h-16 flex items-center justify-center w-full"
             style={{
-              backgroundImage: "url('/images/ribbon-banner.png')",
+              backgroundImage: "url('/line.png')",
             }}
           >
             EDITOR'S CHOICE THIS WEEK
