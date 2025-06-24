@@ -13,7 +13,7 @@ export const casinos: Casino[] = [
   {
     rank: 1,
     name: "Royal Vegas Casino",
-    logo: "/placeholder.svg?height=50&width=100&text=Royal+Vegas",
+    logo: "/billybets.webp",
     rating: 9.8,
     bonus: "100% up to $1000 + 200 FS",
     features: ["MGA License", "Crypto Payments", "Live Casino"],
@@ -23,7 +23,7 @@ export const casinos: Casino[] = [
   {
     rank: 2,
     name: "Spin Palace Casino",
-    logo: "/placeholder.svg?height=50&width=100&text=Spin+Palace",
+    logo: "/betsson.png",
     rating: 9.5,
     bonus: "75% up to $750 + 100 FS",
     features: ["Curacao License", "Mobile App", "Jackpots"],
@@ -32,7 +32,7 @@ export const casinos: Casino[] = [
   {
     rank: 3,
     name: "Jackpot City Casino",
-    logo: "/placeholder.svg?height=50&width=100&text=Jackpot+City",
+    logo: "/betiton.png",
     rating: 9.2,
     bonus: "50% up to $500 + 50 FS",
     features: ["MGA License", "Progressive Jackpots", "Live Dealers"],
@@ -41,7 +41,7 @@ export const casinos: Casino[] = [
   {
     rank: 4,
     name: "888 Casino",
-    logo: "/placeholder.svg?height=50&width=100&text=888+Casino",
+    logo: "/livescorebet.png",
     rating: 9.0,
     bonus: "100% up to $200 + 25 FS",
     features: ["UK License", "Exclusive Games", "Sports Betting"],

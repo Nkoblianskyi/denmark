@@ -60,7 +60,7 @@ export function Footer() {
               className="hover:opacity-80 transition-opacity"
             >
               <img
-                src="/placeholder.svg?height=40&width=120&text=Gamble+Aware"
+                src="/gamble.webp"
                 alt="Gamble Aware"
                 className="h-10 w-auto"
               />
@@ -71,7 +71,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <img src="/placeholder.svg?height=40&width=120&text=Reset+App" alt="Reset App" className="h-10 w-auto" />
+              <img src="/reset.svg" alt="Reset App" className="h-10 w-auto" />
             </a>
             <a
               href="https://www.vic.gov.au"
@@ -80,7 +80,7 @@ export function Footer() {
               className="hover:opacity-80 transition-opacity"
             >
               <img
-                src="/placeholder.svg?height=40&width=120&text=Victoria+Government"
+                src="/victoria.svg"
                 alt="Victoria Government"
                 className="h-10 w-auto"
               />
@@ -92,8 +92,20 @@ export function Footer() {
               className="hover:opacity-80 transition-opacity"
             >
               <img
-                src="/placeholder.svg?height=40&width=120&text=Gamblers+Help"
+                src="/gamblershelp.svg"
                 alt="Gamblers Help"
+                className="h-10 w-auto"
+              />
+            </a>
+            <a
+              href="https://www.gamcare.org.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/gamecare.svg"
+                alt="GamCare"
                 className="h-10 w-auto"
               />
             </a>

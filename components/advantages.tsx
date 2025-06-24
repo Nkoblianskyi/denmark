@@ -24,7 +24,7 @@ export function Advantages() {
       icon: Shield,
       title: "Licensed & Safe",
       color: "text-blue-500",
-      bg: "bg-blue-500/20 border-blue-500/30",
+      bg: "/flag.png",
     },
   ]
 
