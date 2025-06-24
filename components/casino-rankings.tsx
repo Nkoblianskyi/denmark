@@ -220,14 +220,14 @@ export function CasinoRankings() {
                     </div>
 
                     {/* Center Column: Bonus + Rating */}
-                    <div className="text-center px-0 w-64">
+                    <div className="text-center px-0 w-82">
                       {/* Bonus */}
                       <div className="mb-4">
                         <div className="flex items-center justify-center gap-2 text-red-500 mb-3">
                           <Gift className="h-5 w-5" />
-                          <span className="text-base font-medium">BONUS</span>
+                          <span className="text-xl font-medium">BONUS</span>
                         </div>
-                        <div className="text-white font-bold text-xl leading-tight">{casino.bonus}</div>
+                        <div className="text-white font-bold text-2xl leading-tight">{casino.bonus}</div>
                       </div>
 
                       {/* Rating */}
@@ -246,12 +246,12 @@ export function CasinoRankings() {
                     </div>
 
                     {/* Features Column */}
-                    <div className="flex flex-col gap-3 w-48">
+                    <div className="flex flex-col gap-3 w-38">
                       {casino.features.map((feature, index) => (
                         <Badge
                           key={index}
                           variant="outline"
-                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-sm px-3 py-2 text-center whitespace-nowrap"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center whitespace-nowrap"
                         >
                           {feature}
                         </Badge>
@@ -259,7 +259,7 @@ export function CasinoRankings() {
                     </div>
 
                     {/* Right Column: Button */}
-                    <div className="w-32">
+                    <div className="w-48">
                       <Button
                         className={`${casino.isTopChoice
                           ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
