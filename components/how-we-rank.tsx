@@ -20,21 +20,6 @@ export function HowWeRank() {
       title: "Bonuses & Promotions",
       description: "Welcome bonuses, ongoing promotions, and fair wagering requirements",
     },
-    // {
-    //   title: "Customer Support",
-    //   description: "24/7 availability, response times, and support quality",
-    //   weight: "15%",
-    // },
-    // {
-    //   title: "Payment Methods",
-    //   description: "Fast withdrawals, multiple payment options, and low fees",
-    //   weight: "10%",
-    // },
-    // {
-    //   title: "User Experience",
-    //   description: "Website design, mobile compatibility, and overall usability",
-    //   weight: "10%",
-    // },
   ]
 
   const topCasino = getTopCasino()
@@ -69,7 +54,6 @@ export function HowWeRank() {
               <CardContent className="p-4 md:p-6 text-center">
                 <h3 className="text-base md:text-lg font-semibold text-white mb-2">{criterion.title}</h3>
                 <p className="text-gray-400 text-xs md:text-sm mb-3">{criterion.description}</p>
-                <Badge className="bg-red-600 text-white font-semibold text-xs md:text-sm">{criterion.weight}</Badge>
               </CardContent>
             </Card>
           ))}
@@ -129,7 +113,7 @@ export function HowWeRank() {
                           />
                         ))}
                       </div>
-                      <span className="text-white font-semibold text-sm">{topCasino.rating}</span>
+                      <span className="text-white font-semibold text-sm">{topCasino.rating.toFixed(1)}</span>
                     </div>
                   </div>
 
@@ -189,7 +173,7 @@ export function HowWeRank() {
                             />
                           ))}
                         </div>
-                        <span className="text-white font-semibold text-xl">{topCasino.rating}</span>
+                        <span className="text-white font-semibold text-xl">{topCasino.rating.toFixed(1)}</span>
                       </div>
                     </div>
                   </div>
@@ -264,7 +248,7 @@ export function HowWeRank() {
                             />
                           ))}
                         </div>
-                        <span className="text-white font-semibold text-2xl">{topCasino.rating}</span>
+                        <span className="text-white font-semibold text-2xl">{topCasino.rating.toFixed(1)}</span>
                       </div>
                     </div>
                   </div>

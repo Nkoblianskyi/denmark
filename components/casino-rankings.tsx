@@ -1,6 +1,6 @@
 "use client"
 
-import { Star, Gift } from "lucide-react"
+import { Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -19,8 +19,8 @@ export function CasinoRankings() {
             <Card
               key={casino.rank}
               className={`bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 relative overflow-hidden ${casino.isTopChoice
-                ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
-                : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
+                  ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
+                  : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
                 }`}
               onClick={() => handleCardClick(casino.url)}
             >
@@ -75,7 +75,7 @@ export function CasinoRankings() {
                             />
                           ))}
                         </div>
-                        <span className="text-white font-semibold text-sm">{casino.rating}</span>
+                        <span className="text-white font-semibold text-sm">{casino.rating.toFixed(1)}</span>
                       </div>
                     </div>
 
@@ -92,13 +92,12 @@ export function CasinoRankings() {
 
                   {/* Rating - Center */}
 
-
                   {/* Button - Center */}
                   <div className="text-center">
                     <Button
                       className={`${casino.isTopChoice
-                        ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                        : "bg-blue-800 hover:bg-blue-900 text-white"
+                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                          : "bg-blue-800 hover:bg-blue-900 text-white"
                         } font-semibold px-6 py-2 text-sm w-full max-w-xs opacity-100 bg-opacity-100 relative z-10`}
                       onClick={(e) => {
                         e.stopPropagation()
@@ -145,7 +144,7 @@ export function CasinoRankings() {
                               />
                             ))}
                           </div>
-                          <span className="text-white font-semibold text-xl">{casino.rating}</span>
+                          <span className="text-white font-semibold text-xl">{casino.rating.toFixed(1)}</span>
                         </div>
                       </div>
                     </div>
@@ -178,8 +177,8 @@ export function CasinoRankings() {
                     <div className="w-24">
                       <Button
                         className={`${casino.isTopChoice
-                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                          : "bg-blue-800 hover:bg-blue-900 text-white"
+                            ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                            : "bg-blue-800 hover:bg-blue-900 text-white"
                           } font-semibold px-3 py-3 text-sm w-full h-auto opacity-100 bg-opacity-100 relative z-10`}
                         onClick={(e) => {
                           e.stopPropagation()
@@ -227,7 +226,7 @@ export function CasinoRankings() {
                               />
                             ))}
                           </div>
-                          <span className="text-white font-semibold text-2xl">{casino.rating}</span>
+                          <span className="text-white font-semibold text-2xl">{casino.rating.toFixed(1)}</span>
                         </div>
                       </div>
                     </div>
@@ -260,8 +259,8 @@ export function CasinoRankings() {
                     <div className="w-48">
                       <Button
                         className={`${casino.isTopChoice
-                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                          : "bg-blue-800 hover:bg-blue-900 text-white"
+                            ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                            : "bg-blue-800 hover:bg-blue-900 text-white"
                           } font-semibold px-4 py-4 text-lg w-full h-auto opacity-100 bg-opacity-100 relative z-10`}
                         onClick={(e) => {
                           e.stopPropagation()
