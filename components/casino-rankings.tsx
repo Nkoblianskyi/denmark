@@ -90,7 +90,7 @@ export function CasinoRankings() {
                         />
                       ))}
                     </div>
-                    <span className="text-yellow-500 font-semibold text-sm">{casino.rating}</span>
+                    <span className="text-white font-semibold text-sm">{casino.rating}</span>
                   </div>
 
                   {/* Button - Center */}
@@ -145,7 +145,7 @@ export function CasinoRankings() {
                               />
                             ))}
                           </div>
-                          <span className="text-yellow-500 font-semibold text-lg">{casino.rating}</span>
+                          <span className="text-white font-semibold text-xl">{casino.rating}</span>
                         </div>
                       </div>
                     </div>
@@ -227,7 +227,7 @@ export function CasinoRankings() {
                               />
                             ))}
                           </div>
-                          <span className="text-yellow-500 font-semibold text-xl">{casino.rating}</span>
+                          <span className="text-white font-semibold text-2xl">{casino.rating}</span>
                         </div>
                       </div>
                     </div>
