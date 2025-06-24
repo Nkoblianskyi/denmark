@@ -12,39 +12,32 @@ export function CasinoRankings() {
   }
 
   return (
-    <section id="rankings" className="py-16 bg-black">
+    <section id="rankings" className="py-2 bg-black">
       <div className="container mx-auto px-4">
         <div className="space-y-3 md:space-y-4">
           {casinos.map((casino) => (
             <Card
               key={casino.rank}
-              className={`bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 ${
-                casino.isTopChoice
+              className={`bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 ${casino.isTopChoice
                   ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
                   : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
-              }`}
+                }`}
               onClick={() => handleCardClick(casino.url)}
             >
               <CardContent className="p-4">
                 {/* Mobile Layout (up to md) */}
                 <div className="md:hidden">
                   {/* Rank Number - Top Center */}
-                  <div className="flex justify-center mb-3">
-                    <div
-                      className={`flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm ${
-                        casino.isTopChoice
-                          ? "bg-yellow-400 text-black shadow-lg"
-                          : "bg-gray-800 text-white border border-red-900/50"
-                      }`}
-                    >
-                      {casino.rank}
-                    </div>
-                  </div>
 
                   {/* First Row: Logo (left) + Bonus (right) */}
                   <div className="flex items-center justify-between mb-4">
                     {/* Logo */}
                     <div className="flex-shrink-0">
+                      {casino.isTopChoice && (
+                        <Badge className="bg-yellow-400 text-black font-semibold text-xs px-1 py-0.5 mb-1">
+                          #1 CHOICE
+                        </Badge>
+                      )}
                       <div className="bg-white rounded p-3 shadow-sm">
                         <img
                           src={casino.logo || "/placeholder.svg"}
@@ -52,11 +45,6 @@ export function CasinoRankings() {
                           className="h-16 w-24 object-contain"
                         />
                       </div>
-                      {casino.isTopChoice && (
-                        <Badge className="bg-yellow-400 text-black font-semibold text-xs px-1 py-0.5 mt-1">
-                          #1 CHOICE
-                        </Badge>
-                      )}
                     </div>
 
                     {/* Bonus */}
@@ -77,9 +65,8 @@ export function CasinoRankings() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-3 w-3 ${
-                            i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
-                          }`}
+                          className={`h-3 w-3 ${i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
+                            }`}
                         />
                       ))}
                     </div>
@@ -89,11 +76,10 @@ export function CasinoRankings() {
                   {/* Button - Center */}
                   <div className="text-center">
                     <Button
-                      className={`${
-                        casino.isTopChoice
+                      className={`${casino.isTopChoice
                           ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
                           : "bg-red-600 hover:bg-red-700 text-white"
-                      } font-semibold px-6 py-2 text-sm w-full max-w-xs`}
+                        } font-semibold px-6 py-2 text-sm w-full max-w-xs`}
                       onClick={(e) => {
                         e.stopPropagation()
                         handleCardClick(casino.url)
@@ -111,11 +97,10 @@ export function CasinoRankings() {
                     <div className="flex items-center gap-4 w-48">
                       {/* Rank */}
                       <div
-                        className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg ${
-                          casino.isTopChoice
+                        className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg ${casino.isTopChoice
                             ? "bg-yellow-400 text-black shadow-lg"
                             : "bg-gray-800 text-white border border-red-900/50"
-                        }`}
+                          }`}
                       >
                         {casino.rank}
                       </div>
@@ -158,9 +143,8 @@ export function CasinoRankings() {
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className={`h-4 w-4 ${
-                                i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
-                              }`}
+                              className={`h-4 w-4 ${i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
+                                }`}
                             />
                           ))}
                         </div>
@@ -184,11 +168,10 @@ export function CasinoRankings() {
                     {/* Right Column: Button */}
                     <div className="w-24">
                       <Button
-                        className={`${
-                          casino.isTopChoice
+                        className={`${casino.isTopChoice
                             ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
                             : "bg-red-600 hover:bg-red-700 text-white"
-                        } font-semibold px-3 py-3 text-sm w-full h-auto`}
+                          } font-semibold px-3 py-3 text-sm w-full h-auto`}
                         onClick={(e) => {
                           e.stopPropagation()
                           handleCardClick(casino.url)
@@ -207,11 +190,10 @@ export function CasinoRankings() {
                     <div className="flex items-center gap-6 w-72">
                       {/* Rank */}
                       <div
-                        className={`flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl ${
-                          casino.isTopChoice
+                        className={`flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl ${casino.isTopChoice
                             ? "bg-yellow-400 text-black shadow-lg"
                             : "bg-gray-800 text-white border border-red-900/50"
-                        }`}
+                          }`}
                       >
                         {casino.rank}
                       </div>
@@ -254,9 +236,8 @@ export function CasinoRankings() {
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className={`h-5 w-5 ${
-                                i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
-                              }`}
+                              className={`h-5 w-5 ${i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
+                                }`}
                             />
                           ))}
                         </div>
@@ -280,11 +261,10 @@ export function CasinoRankings() {
                     {/* Right Column: Button */}
                     <div className="w-32">
                       <Button
-                        className={`${
-                          casino.isTopChoice
+                        className={`${casino.isTopChoice
                             ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
                             : "bg-red-600 hover:bg-red-700 text-white"
-                        } font-semibold px-4 py-4 text-lg w-full h-auto`}
+                          } font-semibold px-4 py-4 text-lg w-full h-auto`}
                         onClick={(e) => {
                           e.stopPropagation()
                           handleCardClick(casino.url)
