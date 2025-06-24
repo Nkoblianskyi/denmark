@@ -122,8 +122,8 @@ export function CasinoRankings() {
                       <div
                         className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg ${
                           casino.isTopChoice
-                            ? "bg-yellow-400 text-black shadow-lg"
-                            : "bg-red-800 text-white border border-red-900/50"
+                            ? "bg-yellow-400 text-black"
+                            : "bg-red-800 text-white"
                         }`}
                       >
                         {casino.rank}
@@ -162,8 +162,7 @@ export function CasinoRankings() {
                       {/* Bonus */}
                       <div className="mb-3">
                         <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                          <Gift className="h-4 w-4" />
-                          <span className="text-sm font-medium">BONUS</span>
+                          <span className="text-sm font-medium">WELCOME BONUS</span>
                         </div>
                         <div className="text-white font-bold text-lg leading-tight">{casino.bonus}</div>
                       </div>
@@ -210,8 +209,8 @@ export function CasinoRankings() {
                       <div
                         className={`flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl ${
                           casino.isTopChoice
-                            ? "bg-yellow-400 text-black shadow-lg"
-                            : "bg-red-800 text-white border border-red-900/50"
+                            ? "bg-yellow-400 text-black"
+                            : "bg-red-800 text-white"
                         }`}
                       >
                         {casino.rank}
@@ -250,8 +249,7 @@ export function CasinoRankings() {
                       {/* Bonus */}
                       <div className="mb-4">
                         <div className="flex items-center justify-center gap-2 text-red-500 mb-3">
-                          <Gift className="h-5 w-5" />
-                          <span className="text-2xl font-medium">BONUS</span>
+                          <span className="text-xl font-medium"> WELCOME BONUS</span>
                         </div>
                         <div className="text-white font-bold text-2xl leading-tight">{casino.bonus}</div>
                       </div>
