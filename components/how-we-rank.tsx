@@ -43,7 +43,7 @@ export function HowWeRank() {
   const topCasino = getTopCasino()
   const topCasinoExtended = {
     ...topCasino,
-    features: ["MGA License", "Crypto Payments", "Live Casino", "24/7 Support"],
+    features: ["Crypto Payments", "Live Casino", "24/7 Support"],
     pros: ["Excellent game variety", "Fast payouts", "Professional support", "Mobile optimized"],
     cons: ["High wagering requirements", "Limited live chat hours"],
   }
