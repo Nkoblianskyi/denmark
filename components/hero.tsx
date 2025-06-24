@@ -34,8 +34,8 @@ export function Hero() {
       <div className="relative z-10 container mx-auto px-4 text-center h-full flex flex-col justify-center">
         <div className="flex items-center justify-center mb-2 md:mb-6">
           <h1 className="text-lg md:text-5xl lg:text-6xl font-bold drop-shadow-lg leading-tight">
-            <span className="text-blue-800">Best Online</span>
-            <span className="text-white"> Casinos Australia </span>
+            <span className="text-blue-800">Best</span>
+            <span className="text-white"> Online Casinos Australia </span>
             <span className="text-red-500">2025</span>
           </h1>
         </div>

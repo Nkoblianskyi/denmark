@@ -58,7 +58,7 @@ export function CasinoRankings() {
                   <div className="flex items-center justify-between mb-4">
                     {/* Logo */}
                     <div className="flex-shrink-0 mt-4">
-                      <div className="bg-white rounded p-3 shadow-sm">
+                      <div className="bg-white opacity-100 backdrop-blur-sm rounded p-3 shadow-sm relative z-10">
                         <img
                           src={casino.logo || "/placeholder.svg"}
                           alt={`${casino.name} logo`}
@@ -99,7 +99,7 @@ export function CasinoRankings() {
                       className={`${casino.isTopChoice
                           ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
                           : "bg-blue-800 hover:bg-blue-900 text-white"
-                        } font-semibold px-6 py-2 text-sm w-full max-w-xs`}
+                        } font-semibold px-6 py-2 text-sm w-full max-w-xs opacity-100 bg-opacity-100 relative z-10`}
                       onClick={(e) => {
                         e.stopPropagation()
                         handleCardClick(casino.url)
@@ -118,7 +118,7 @@ export function CasinoRankings() {
                       {/* Rank */}
                       <div
                         className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg ${casino.isTopChoice ? "bg-yellow-400 text-black" : "bg-red-800 text-white"
-                          }`}
+                          } opacity-100 bg-opacity-100 relative z-10`}
                       >
                         {casino.rank}
                       </div>
@@ -126,7 +126,7 @@ export function CasinoRankings() {
                       {/* Casino Info Column */}
                       <div className="text-center flex-1">
                         {/* Logo */}
-                        <div className="bg-white rounded p-2 shadow-sm mb-2 mx-auto w-fit">
+                        <div className="bg-white opacity-100 backdrop-blur-sm rounded p-2 shadow-sm mb-2 mx-auto w-fit relative z-10">
                           <img
                             src={casino.logo || "/placeholder.svg"}
                             alt={`${casino.name} logo`}
@@ -167,7 +167,7 @@ export function CasinoRankings() {
                         <Badge
                           key={index}
                           variant="outline"
-                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center justify-center whitespace-nowrap w-32"
+                          className="border-red-900/70 text-gray-300 bg-red-950 text-xs px-2 py-1 text-center justify-center whitespace-nowrap w-32 opacity-100 relative z-10"
                         >
                           {feature}
                         </Badge>
@@ -180,7 +180,7 @@ export function CasinoRankings() {
                         className={`${casino.isTopChoice
                             ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
                             : "bg-blue-800 hover:bg-blue-900 text-white"
-                          } font-semibold px-3 py-3 text-sm w-full h-auto`}
+                          } font-semibold px-3 py-3 text-sm w-full h-auto opacity-100 bg-opacity-100 relative z-10`}
                         onClick={(e) => {
                           e.stopPropagation()
                           handleCardClick(casino.url)
@@ -200,7 +200,7 @@ export function CasinoRankings() {
                       {/* Rank */}
                       <div
                         className={`flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl ${casino.isTopChoice ? "bg-yellow-400 text-black" : "bg-red-800 text-white"
-                          }`}
+                          } opacity-100 bg-opacity-100 relative z-10`}
                       >
                         {casino.rank}
                       </div>
@@ -208,7 +208,7 @@ export function CasinoRankings() {
                       {/* Casino Info Column */}
                       <div className="text-center flex-1">
                         {/* Logo */}
-                        <div className="bg-white rounded p-3 shadow-sm mb-2 mt-3 mx-auto w-fit">
+                        <div className="bg-white opacity-100 backdrop-blur-sm rounded p-3 shadow-sm mb-2 mt-3 mx-auto w-fit relative z-10">
                           <img
                             src={casino.logo || "/placeholder.svg"}
                             alt={`${casino.name} logo`}
@@ -249,7 +249,7 @@ export function CasinoRankings() {
                         <Badge
                           key={index}
                           variant="outline"
-                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center justify-center whitespace-nowrap w-32"
+                          className="border-red-900/70 text-gray-300 bg-red-950 text-xs px-3 py-2 text-center justify-center whitespace-nowrap w-32 opacity-100 relative z-10"
                         >
                           {feature}
                         </Badge>
@@ -262,7 +262,7 @@ export function CasinoRankings() {
                         className={`${casino.isTopChoice
                             ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
                             : "bg-blue-800 hover:bg-blue-900 text-white"
-                          } font-semibold px-4 py-4 text-lg w-full h-auto`}
+                          } font-semibold px-4 py-4 text-lg w-full h-auto opacity-100 bg-opacity-100 relative z-10`}
                         onClick={(e) => {
                           e.stopPropagation()
                           handleCardClick(casino.url)

@@ -16,7 +16,7 @@ export const casinos: Casino[] = [
     logo: "/billybets.webp",
     rating: 9.8,
     bonus: "100% up to $1000 + 200 FS",
-    features: ["Instant Payouts", "Mobile App", "5% Cashback"],
+    features: ["Instant Payouts", "Mobile App", "Cashback"],
     isTopChoice: true,
     url: "https://royalvegas.com",
   },
