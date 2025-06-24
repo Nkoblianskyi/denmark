@@ -30,21 +30,25 @@ export function Advantages() {
   ]
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-2 sm:px-4">
       <div className="flex justify-center">
-        <div className="grid grid-cols-4 gap-3 max-w-2xl">
+        <div className="grid grid-cols-4 gap-1 sm:gap-3 max-w-xs sm:max-w-2xl">
           {advantages.map((advantage, index) => (
             <div key={index} className="text-center">
-              <div
-                className={`inline-flex items-center justify-center w-8 h-8 mb-2`}
-              >
+              <div className={`inline-flex items-center justify-center w-4 sm:w-8 h-4 sm:h-8 mb-1 sm:mb-2`}>
                 {advantage.title === "Licensed & Safe" ? (
-                  <Image src='/flag.png' width={24} height={24} alt={advantage.title} className="h-8 w-8" />
+                  <Image
+                    src="/flag.png"
+                    width={24}
+                    height={24}
+                    alt={advantage.title}
+                    className="h-4 sm:h-8 w-4 sm:w-8"
+                  />
                 ) : (
-                  <advantage.icon className={`h-8 w-8 ${advantage.color}`} />
+                  <advantage.icon className={`h-4 sm:h-8 w-4 sm:w-8 ${advantage.color}`} />
                 )}
               </div>
-              <h3 className="text-xs font-semibold text-white">{advantage.title}</h3>
+              <h3 className="text-xs sm:text-xs font-semibold text-white">{advantage.title}</h3>
             </div>
           ))}
         </div>

@@ -13,7 +13,7 @@ export function CasinoModal() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true)
-    }, 1000) // Show modal after 8 seconds
+    }, 8000) // Show modal after 8 seconds
 
     return () => clearTimeout(timer)
   }, [])
@@ -27,17 +27,7 @@ export function CasinoModal() {
 
   return (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-      <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:min-w-[400px] lg:max-w-[440px]">
-        <button
-            onClick={(e) => {
-              e.stopPropagation()
-              setIsOpen(false)
-            }}
-            className="absolute top-[-15px] right-1 text-gray-400 hover:text-white z-20"
-          >
-            <X className="h-4 w-4 sm:h-5 sm:w-5" />
-          </button>
-
+      <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:min-w-[400px] lg:max-w-[440px]">
         {/* Ribbon banner above card - stretched background image */}
         <div className="absolute -top-2 -left-8 -right-8 z-10">
           <div
@@ -49,16 +39,25 @@ export function CasinoModal() {
               backgroundPosition: "center",
             }}
           >
-            <p className="relative z-10 mb-3">EDITOR'S CHOICE THIS WEEK</p>
+            EDITOR'S CHOICE THIS WEEK
           </div>
         </div>
 
         <Card className="bg-gray-900 border-2 border-red-600 w-full relative overflow-hidden mt-6 sm:mt-7 md:mt-8">
-          
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              setIsOpen(false)
+            }}
+            className="absolute top-3 right-3 text-gray-400 hover:text-white z-20"
+          >
+            <X className="h-4 w-4 sm:h-5 sm:w-5" />
+          </button>
+
           <CardContent className="p-4 sm:p-6 text-center bg-gray-900">
             {/* Logo */}
             <div className="mb-4 sm:mb-6 mt-3 sm:mt-4">
-              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-lg mx-auto w-fit">
+              <div className="bg-transparent rounded-lg p-3 sm:p-4 shadow-lg mx-auto w-fit">
                 <img
                   src={topCasino.logo || "/placeholder.svg"}
                   alt={`${topCasino.name} logo`}
@@ -71,7 +70,8 @@ export function CasinoModal() {
             <div className="mb-4 sm:mb-6">
               <p className="text-white text-sm sm:text-base mb-2 font-bold">WELCOME BONUS</p>
               <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1">
-                <span className="text-yellow-400">{topCasino.bonus}</span>
+                <span className="text-white">100% up to </span>
+                <span className="text-yellow-400">$1000 + 200 FS</span>
               </div>
             </div>
 

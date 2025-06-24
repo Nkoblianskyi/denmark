@@ -19,8 +19,8 @@ export function CasinoRankings() {
             <Card
               key={casino.rank}
               className={`bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 relative overflow-hidden ${casino.isTopChoice
-                  ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
-                  : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
+                ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
+                : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
                 }`}
               onClick={() => handleCardClick(casino.url)}
             >
@@ -55,49 +55,50 @@ export function CasinoRankings() {
                   {/* Rank Number - Top Center */}
 
                   {/* First Row: Logo (left) + Bonus (right) */}
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-2">
                     {/* Logo */}
-                    <div className="flex-shrink-0 mt-4">
-                      <div className="bg-white opacity-100 backdrop-blur-sm rounded p-3 shadow-sm relative z-10">
+                    <div className="flex-shrink-0 mt-3">
+                      <div className="bg-transparent rounded shadow-sm relative z-10">
                         <img
                           src={casino.logo || "/placeholder.svg"}
                           alt={`${casino.name} logo`}
                           className="h-16 w-24 object-contain"
                         />
                       </div>
+                      <div className="flex items- justify-center gap-2 mt-2">
+                        <div className="flex items-center">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className={`h-3 w-3 ${i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
+                                }`}
+                            />
+                          ))}
+                        </div>
+                        <span className="text-white font-semibold text-sm">{casino.rating}</span>
+                      </div>
                     </div>
 
                     {/* Bonus */}
                     <div className="text-center flex-1 ml-4">
                       <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                        <span className="text-sm font-medium">WELCOME BONU</span>
+                        <span className="text-sm font-medium">WELCOME BONUS</span>
                       </div>
-                      <div className="text-white font-bold text-lg leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded border border-yellow-400/30">
+                      <div className="text-white font-bold text-xl leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
                         {casino.bonus}
                       </div>
                     </div>
                   </div>
 
                   {/* Rating - Center */}
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-3 w-3 ${i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
-                            }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-white font-semibold text-sm">{casino.rating}</span>
-                  </div>
+
 
                   {/* Button - Center */}
                   <div className="text-center">
                     <Button
                       className={`${casino.isTopChoice
-                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                          : "bg-blue-800 hover:bg-blue-900 text-white"
+                        ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                        : "bg-blue-800 hover:bg-blue-900 text-white"
                         } font-semibold px-6 py-2 text-sm w-full max-w-xs opacity-100 bg-opacity-100 relative z-10`}
                       onClick={(e) => {
                         e.stopPropagation()
@@ -125,7 +126,7 @@ export function CasinoRankings() {
                       {/* Casino Info Column */}
                       <div className="text-center flex-1">
                         {/* Logo */}
-                        <div className="bg-white opacity-100 backdrop-blur-sm rounded p-2 shadow-sm mb-2 mx-auto w-fit relative z-10">
+                        <div className="bg-transparent rounded p-2 shadow-sm mb-2 mx-auto w-fit relative z-10">
                           <img
                             src={casino.logo || "/placeholder.svg"}
                             alt={`${casino.name} logo`}
@@ -177,8 +178,8 @@ export function CasinoRankings() {
                     <div className="w-24">
                       <Button
                         className={`${casino.isTopChoice
-                            ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                            : "bg-blue-800 hover:bg-blue-900 text-white"
+                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                          : "bg-blue-800 hover:bg-blue-900 text-white"
                           } font-semibold px-3 py-3 text-sm w-full h-auto opacity-100 bg-opacity-100 relative z-10`}
                         onClick={(e) => {
                           e.stopPropagation()
@@ -207,7 +208,7 @@ export function CasinoRankings() {
                       {/* Casino Info Column */}
                       <div className="text-center flex-1">
                         {/* Logo */}
-                        <div className="bg-white opacity-100 backdrop-blur-sm rounded p-3 shadow-sm mb-2 mt-3 mx-auto w-fit relative z-10">
+                        <div className="bg-transparent rounded p-3 shadow-sm mb-2 mt-3 mx-auto w-fit relative z-10">
                           <img
                             src={casino.logo || "/placeholder.svg"}
                             alt={`${casino.name} logo`}
@@ -259,8 +260,8 @@ export function CasinoRankings() {
                     <div className="w-48">
                       <Button
                         className={`${casino.isTopChoice
-                            ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                            : "bg-blue-800 hover:bg-blue-900 text-white"
+                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                          : "bg-blue-800 hover:bg-blue-900 text-white"
                           } font-semibold px-4 py-4 text-lg w-full h-auto opacity-100 bg-opacity-100 relative z-10`}
                         onClick={(e) => {
                           e.stopPropagation()
