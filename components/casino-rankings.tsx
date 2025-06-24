@@ -1,60 +1,12 @@
 "use client"
 
-import { Star, Gift, Trophy } from "lucide-react"
+import { Star, Gift } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { casinos } from "@/data/casinos"
 
 export function CasinoRankings() {
-  const casinos = [
-    {
-      rank: 1,
-      name: "Royal Vegas Casino",
-      logo: "/placeholder.svg?height=50&width=100&text=Royal+Vegas",
-      rating: 9.8,
-      bonus: "100% up to $1000 + 200 FS",
-      features: ["MGA License", "Crypto Payments", "Live Casino"],
-      isTopChoice: true,
-      url: "https://royalvegas.com",
-    },
-    {
-      rank: 2,
-      name: "Spin Palace Casino",
-      logo: "/placeholder.svg?height=50&width=100&text=Spin+Palace",
-      rating: 9.5,
-      bonus: "75% up to $750 + 100 FS",
-      features: ["Curacao License", "Mobile App", "Jackpots"],
-      url: "https://spinpalace.com",
-    },
-    {
-      rank: 3,
-      name: "Jackpot City Casino",
-      logo: "/placeholder.svg?height=50&width=100&text=Jackpot+City",
-      rating: 9.2,
-      bonus: "50% up to $500 + 50 FS",
-      features: ["MGA License", "Progressive Jackpots", "Live Dealers"],
-      url: "https://jackpotcity.com",
-    },
-    {
-      rank: 4,
-      name: "888 Casino",
-      logo: "/placeholder.svg?height=50&width=100&text=888+Casino",
-      rating: 9.0,
-      bonus: "100% up to $200 + 25 FS",
-      features: ["UK License", "Exclusive Games", "Sports Betting"],
-      url: "https://888casino.com",
-    },
-    {
-      rank: 5,
-      name: "LeoVegas Casino",
-      logo: "/placeholder.svg?height=50&width=100&text=LeoVegas",
-      rating: 8.8,
-      bonus: "200% up to $300 + 30 FS",
-      features: ["Mobile Casino", "Live Games", "Fast Payouts"],
-      url: "https://leovegas.com",
-    },
-  ]
-
   const handleCardClick = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer")
   }
@@ -68,26 +20,104 @@ export function CasinoRankings() {
               key={casino.rank}
               className={`bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 ${
                 casino.isTopChoice
-                  ? "ring-2 ring-yellow-500 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-400"
+                  ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
                   : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
               }`}
               onClick={() => handleCardClick(casino.url)}
             >
-              <CardContent className="p-4 md:p-6">
-                {/* Mobile and Tablet Layout (up to lg) */}
-                <div className="lg:hidden">
+              <CardContent className="p-4">
+                {/* Mobile Layout (up to md) */}
+                <div className="md:hidden">
+                  {/* Rank Number - Top Center */}
+                  <div className="flex justify-center mb-3">
+                    <div
+                      className={`flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm ${
+                        casino.isTopChoice
+                          ? "bg-yellow-400 text-black shadow-lg"
+                          : "bg-gray-800 text-white border border-red-900/50"
+                      }`}
+                    >
+                      {casino.rank}
+                    </div>
+                  </div>
+
+                  {/* First Row: Logo (left) + Bonus (right) */}
+                  <div className="flex items-center justify-between mb-4">
+                    {/* Logo */}
+                    <div className="flex-shrink-0">
+                      <div className="bg-white rounded p-3 shadow-sm">
+                        <img
+                          src={casino.logo || "/placeholder.svg"}
+                          alt={`${casino.name} logo`}
+                          className="h-16 w-24 object-contain"
+                        />
+                      </div>
+                      {casino.isTopChoice && (
+                        <Badge className="bg-yellow-400 text-black font-semibold text-xs px-1 py-0.5 mt-1">
+                          #1 CHOICE
+                        </Badge>
+                      )}
+                    </div>
+
+                    {/* Bonus */}
+                    <div className="text-center flex-1 ml-4">
+                      <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
+                        <Gift className="h-4 w-4" />
+                        <span className="text-sm font-medium">BONUS</span>
+                      </div>
+                      <div className="text-white font-bold text-lg leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded border border-yellow-400/30">
+                        {casino.bonus}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Rating - Center */}
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`h-3 w-3 ${
+                            i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-yellow-500 font-semibold text-sm">{casino.rating}</span>
+                  </div>
+
+                  {/* Button - Center */}
+                  <div className="text-center">
+                    <Button
+                      className={`${
+                        casino.isTopChoice
+                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                          : "bg-red-600 hover:bg-red-700 text-white"
+                      } font-semibold px-6 py-2 text-sm w-full max-w-xs`}
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handleCardClick(casino.url)
+                      }}
+                    >
+                      Claim Bonus
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Tablet Layout (md to lg) */}
+                <div className="hidden md:block lg:hidden">
                   <div className="flex items-center justify-between gap-0">
                     {/* Left Column: Rank + Casino Info */}
                     <div className="flex items-center gap-4 w-48">
                       {/* Rank */}
                       <div
-                        className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-base flex-shrink-0 ${
+                        className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg ${
                           casino.isTopChoice
-                            ? "bg-gradient-to-r from-yellow-500 to-red-500 text-black shadow-lg"
+                            ? "bg-yellow-400 text-black shadow-lg"
                             : "bg-gray-800 text-white border border-red-900/50"
                         }`}
                       >
-                        {casino.rank === 1 ? <Trophy className="h-5 w-5" /> : casino.rank}
+                        {casino.rank}
                       </div>
 
                       {/* Casino Info Column */}
@@ -106,9 +136,7 @@ export function CasinoRankings() {
 
                         {/* Badge under logo */}
                         {casino.isTopChoice && (
-                          <Badge className="bg-gradient-to-r from-yellow-500 to-red-500 text-black font-semibold text-xs px-2 py-1">
-                            #1 CHOICE
-                          </Badge>
+                          <Badge className="bg-yellow-400 text-black font-semibold text-xs px-2 py-1">#1 CHOICE</Badge>
                         )}
                       </div>
                     </div>
@@ -121,7 +149,7 @@ export function CasinoRankings() {
                           <Gift className="h-4 w-4" />
                           <span className="text-sm font-medium">BONUS</span>
                         </div>
-                        <div className="text-white font-bold text-base leading-tight">{casino.bonus}</div>
+                        <div className="text-white font-bold text-lg leading-tight">{casino.bonus}</div>
                       </div>
 
                       {/* Rating */}
@@ -140,7 +168,7 @@ export function CasinoRankings() {
                       </div>
                     </div>
 
-                    {/* Features Column - NEW SEPARATE COLUMN */}
+                    {/* Features Column */}
                     <div className="flex flex-col gap-2 w-40">
                       {casino.features.map((feature, index) => (
                         <Badge
@@ -158,7 +186,7 @@ export function CasinoRankings() {
                       <Button
                         className={`${
                           casino.isTopChoice
-                            ? "bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-black shadow-lg"
+                            ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
                             : "bg-red-600 hover:bg-red-700 text-white"
                         } font-semibold px-3 py-3 text-sm w-full h-auto`}
                         onClick={(e) => {
@@ -181,11 +209,11 @@ export function CasinoRankings() {
                       <div
                         className={`flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl ${
                           casino.isTopChoice
-                            ? "bg-gradient-to-r from-yellow-500 to-red-500 text-black shadow-lg"
+                            ? "bg-yellow-400 text-black shadow-lg"
                             : "bg-gray-800 text-white border border-red-900/50"
                         }`}
                       >
-                        {casino.rank === 1 ? <Trophy className="h-7 w-7" /> : casino.rank}
+                        {casino.rank}
                       </div>
 
                       {/* Casino Info Column */}
@@ -204,9 +232,7 @@ export function CasinoRankings() {
 
                         {/* Badge under logo */}
                         {casino.isTopChoice && (
-                          <Badge className="bg-gradient-to-r from-yellow-500 to-red-500 text-black font-semibold text-sm px-3 py-1">
-                            #1 CHOICE
-                          </Badge>
+                          <Badge className="bg-yellow-400 text-black font-semibold text-xs px-2 py-1">#1 CHOICE</Badge>
                         )}
                       </div>
                     </div>
@@ -219,7 +245,7 @@ export function CasinoRankings() {
                           <Gift className="h-5 w-5" />
                           <span className="text-base font-medium">BONUS</span>
                         </div>
-                        <div className="text-white font-bold text-lg leading-tight">{casino.bonus}</div>
+                        <div className="text-white font-bold text-xl leading-tight">{casino.bonus}</div>
                       </div>
 
                       {/* Rating */}
@@ -256,7 +282,7 @@ export function CasinoRankings() {
                       <Button
                         className={`${
                           casino.isTopChoice
-                            ? "bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-black shadow-lg"
+                            ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
                             : "bg-red-600 hover:bg-red-700 text-white"
                         } font-semibold px-4 py-4 text-lg w-full h-auto`}
                         onClick={(e) => {

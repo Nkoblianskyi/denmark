@@ -1,6 +1,5 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
-import { Advantages } from "@/components/advantages"
 import { CasinoRankings } from "@/components/casino-rankings"
 import { HowWeRank } from "@/components/how-we-rank"
 import { Footer } from "@/components/footer"
@@ -12,7 +11,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-black">
       <Header />
       <Hero />
-      <Advantages />
       <CasinoRankings />
       <HowWeRank />
       <Footer />

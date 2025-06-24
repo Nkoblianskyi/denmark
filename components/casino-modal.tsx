@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { X, Star, Gift, ExternalLink } from "lucide-react"
+import { getTopCasino } from "@/data/casinos"
 
 export function CasinoModal() {
   const [isOpen, setIsOpen] = useState(false)
+  const topCasino = getTopCasino()
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -18,16 +20,6 @@ export function CasinoModal() {
   }, [])
 
   if (!isOpen) return null
-
-  const topCasino = {
-    rank: 1,
-    name: "Royal Vegas Casino",
-    logo: "/placeholder.svg?height=60&width=120&text=Royal+Vegas",
-    rating: 9.8,
-    bonus: "100% up to $1000 + 200 FS",
-    features: ["MGA License", "Crypto Payments", "Live Casino"],
-    url: "https://royalvegas.com",
-  }
 
   const handleModalClick = () => {
     window.open(topCasino.url, "_blank", "noopener,noreferrer")
@@ -74,7 +66,7 @@ export function CasinoModal() {
             </div>
 
             <div className="text-center mb-3">
-              <Badge className="bg-gradient-to-r from-yellow-500 to-red-500 text-black font-semibold">
+              <Badge className="bg-yellow-400 text-black font-semibold">
                 <Gift className="h-3 w-3 mr-1" />
                 {topCasino.bonus}
               </Badge>
@@ -91,7 +83,7 @@ export function CasinoModal() {
 
           <div className="space-y-3">
             <Button
-              className="w-full bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-black font-semibold"
+              className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold"
               onClick={(e) => {
                 e.stopPropagation()
                 handleModalClick()
