@@ -58,7 +58,7 @@ export function CasinoRankings() {
                   {/* First Row: Logo (left) + Bonus (right) */}
                   <div className="flex items-center justify-between mb-4">
                     {/* Logo */}
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 mt-4">
                       <div className="bg-white rounded p-3 shadow-sm">
                         <img
                           src={casino.logo || "/placeholder.svg"}
