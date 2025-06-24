@@ -11,17 +11,14 @@ export function HowWeRank() {
     {
       title: "Licensing & Security",
       description: "We only review casinos with valid licenses from reputable authorities",
-      weight: "25%",
     },
     {
       title: "Game Selection",
       description: "Variety and quality of slots, table games, and live dealer options",
-      weight: "20%",
     },
     {
       title: "Bonuses & Promotions",
       description: "Welcome bonuses, ongoing promotions, and fair wagering requirements",
-      weight: "20%",
     },
     // {
     //   title: "Customer Support",
