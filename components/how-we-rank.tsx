@@ -1,6 +1,6 @@
 "use client"
 
-import { CheckCircle, Star } from "lucide-react"
+import { Star } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -23,29 +23,33 @@ export function HowWeRank() {
       description: "Welcome bonuses, ongoing promotions, and fair wagering requirements",
       weight: "20%",
     },
-    {
-      title: "Customer Support",
-      description: "24/7 availability, response times, and support quality",
-      weight: "15%",
-    },
-    {
-      title: "Payment Methods",
-      description: "Fast withdrawals, multiple payment options, and low fees",
-      weight: "10%",
-    },
-    {
-      title: "User Experience",
-      description: "Website design, mobile compatibility, and overall usability",
-      weight: "10%",
-    },
+    // {
+    //   title: "Customer Support",
+    //   description: "24/7 availability, response times, and support quality",
+    //   weight: "15%",
+    // },
+    // {
+    //   title: "Payment Methods",
+    //   description: "Fast withdrawals, multiple payment options, and low fees",
+    //   weight: "10%",
+    // },
+    // {
+    //   title: "User Experience",
+    //   description: "Website design, mobile compatibility, and overall usability",
+    //   weight: "10%",
+    // },
   ]
 
   const topCasino = getTopCasino()
   const topCasinoExtended = {
     ...topCasino,
-    features: ["Crypto Payments", "Live Casino", "24/7 Support"],
+    features: ["MGA License", "Crypto Payments", "Live Casino", "24/7 Support"],
     pros: ["Excellent game variety", "Fast payouts", "Professional support", "Mobile optimized"],
     cons: ["High wagering requirements", "Limited live chat hours"],
+  }
+
+  const handleCardClick = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer")
   }
 
   return (
@@ -74,7 +78,7 @@ export function HowWeRank() {
           ))}
         </div>
 
-        {/* Our Choice Section - Make mobile friendly */}
+        {/* Our Choice Section */}
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Our <span className="text-yellow-400">Top Choice</span>
@@ -85,90 +89,230 @@ export function HowWeRank() {
           </p>
         </div>
 
-        <Card className="bg-gray-900 border-2 border-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 max-w-4xl mx-auto">
-          <CardContent className="p-4 md:p-8">
-            <div className="flex flex-col items-center gap-4 md:gap-8">
-              {/* Casino Logo and Info - Mobile optimized */}
-              <div className="text-center w-full">
-                <div className="bg-white rounded-lg p-3 md:p-4 shadow-lg mb-3 md:mb-4 inline-block">
-                  <img
-                    src={topCasino.logo || "/placeholder.svg"}
-                    alt={`${topCasino.name} logo`}
-                    className="h-12 md:h-16 w-auto"
-                  />
+        <div className="space-y-3 md:space-y-4">
+          <Card
+            className="bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 relative overflow-hidden ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
+            onClick={() => handleCardClick(topCasino.url)}
+          >
+            <CardContent className="p-4">
+              <Badge className="absolute -top-1 -left-1 bg-yellow-400 text-black font-black text-xs px-3 py-1 z-10 rounded-sm">
+                OUR FAVORITE
+              </Badge>
+
+              <div className="absolute inset-0 opacity-10 pointer-events-none">
+                <div
+                  className="w-full h-full"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fbbf24' fillOpacity='0.4'%3E%3Ctext x='10' y='20' fontSize='16' fontFamily='serif'%3E♠%3C/text%3E%3Ctext x='50' y='20' fontSize='16' fontFamily='serif'%3E♥%3C/text%3E%3Ctext x='30' y='40' fontSize='16' fontFamily='serif'%3E♦%3C/text%3E%3Ctext x='70' y='40' fontSize='16' fontFamily='serif'%3E♣%3C/text%3E%3Ccircle cx='20' cy='60' r='8' fill='none' stroke='%23fbbf24' strokeWidth='2'/%3E%3Ccircle cx='60' cy='60' r='8' fill='none' stroke='%23dc2626' strokeWidth='2'/%3E%3Crect x='5' y='5' width='12' height='12' rx='2' fill='none' stroke='%23fbbf24' strokeWidth='1'/%3E%3Crect x='63' y='5' width='12' height='12' rx='2' fill='none' stroke='%23dc2626' strokeWidth='1'/%3E%3Ccircle cx='8' cy='8' r='1' fill='%23fbbf24'/%3E%3Ccircle cx='14' cy='14' r='1' fill='%23fbbf24'/%3E%3Ccircle cx='66' cy='8' r='1' fill='%23dc2626'/%3E%3Ccircle cx='72' cy='14' r='1' fill='%23dc2626'/%3E%3C/g%3E%3C/svg%3E")`,
+                    backgroundSize: "80px 80px",
+                    backgroundRepeat: "repeat",
+                  }}
+                />
+              </div>
+
+              {/* Mobile Layout (up to md) */}
+              <div className="md:hidden">
+                {/* First Row: Logo (left) + Bonus (right) */}
+                <div className="flex items-center justify-between mb-2">
+                  {/* Logo */}
+                  <div className="flex-shrink-0 mt-3">
+                    <div className="bg-transparent rounded shadow-sm relative z-10">
+                      <img
+                        src={topCasino.logo || "/placeholder.svg"}
+                        alt={`${topCasino.name} logo`}
+                        className="h-16 w-24 object-contain"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center gap-2 mt-2">
+                      <div className="flex items-center">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-3 w-3 ${i < Math.floor(topCasino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"}`}
+                          />
+                        ))}
+                      </div>
+                      <span className="text-white font-semibold text-sm">{topCasino.rating}</span>
+                    </div>
+                  </div>
+
+                  {/* Bonus */}
+                  <div className="text-center flex-1 ml-4">
+                    <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
+                      <span className="text-sm font-medium">WELCOME BONUS</span>
+                    </div>
+                    <div className="text-white font-bold text-xl leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
+                      {topCasino.bonus}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{topCasino.name}</h3>
-                <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 md:h-5 md:w-5 text-yellow-400 fill-current" />
+
+                {/* Button - Center */}
+                <div className="text-center">
+                  <Button
+                    className="bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg font-semibold px-6 py-2 text-sm w-full max-w-xs opacity-100 bg-opacity-100 relative z-10"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      handleCardClick(topCasino.url)
+                    }}
+                  >
+                    GET BONUS
+                  </Button>
+                </div>
+              </div>
+
+              {/* Tablet Layout (md to lg) */}
+              <div className="hidden md:block lg:hidden">
+                <div className="flex items-center justify-between gap-0">
+                  {/* Left Column: Rank + Casino Info */}
+                  <div className="flex items-center gap-4 w-48">
+                    {/* Rank */}
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg bg-yellow-400 text-black opacity-100 bg-opacity-100 relative z-10">
+                      1
+                    </div>
+
+                    {/* Casino Info Column */}
+                    <div className="text-center flex-1">
+                      {/* Logo */}
+                      <div className="bg-transparent rounded p-2 shadow-sm mb-2 mx-auto w-fit relative z-10">
+                        <img
+                          src={topCasino.logo || "/placeholder.svg"}
+                          alt={`${topCasino.name} logo`}
+                          className="h-16 w-auto"
+                        />
+                      </div>
+
+                      {/* Rating under logo */}
+                      <div className="flex items-center justify-center gap-2">
+                        <div className="flex items-center">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className={`h-4 w-4 ${i < Math.floor(topCasino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"}`}
+                            />
+                          ))}
+                        </div>
+                        <span className="text-white font-semibold text-xl">{topCasino.rating}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Center Column: Bonus only */}
+                  <div className="text-center px-0 w-44">
+                    {/* Bonus */}
+                    <div className="mb-3">
+                      <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
+                        <span className="text-sm font-medium">WELCOME BONUS</span>
+                      </div>
+                      <div className="text-white font-bold text-lg leading-tight">{topCasino.bonus}</div>
+                    </div>
+                  </div>
+
+                  {/* Features Column */}
+                  <div className="flex flex-col gap-2 w-40">
+                    {topCasinoExtended.features.map((feature, index) => (
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="border-red-900/70 text-gray-300 bg-red-950 text-xs px-2 py-1 text-center justify-center whitespace-nowrap w-32 opacity-100 relative z-10 font-bold"
+                      >
+                        {feature}
+                      </Badge>
                     ))}
                   </div>
-                  <span className="text-yellow-400 font-bold text-base md:text-lg">{topCasino.rating}/10</span>
+
+                  {/* Right Column: Button */}
+                  <div className="w-24">
+                    <Button
+                      className="bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg font-semibold px-3 py-3 text-sm w-full h-auto opacity-100 bg-opacity-100 relative z-10"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handleCardClick(topCasino.url)
+                      }}
+                    >
+                      GET BONUS
+                    </Button>
+                  </div>
                 </div>
-                <Badge className="bg-yellow-400 text-black font-semibold text-sm md:text-lg px-3 md:px-4 py-1 md:py-2">
-                  {topCasino.bonus}
-                </Badge>
               </div>
 
-              {/* Pros and Cons - Stack on mobile */}
-              <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <div>
-                  <h4 className="text-green-500 font-semibold mb-3 flex items-center justify-center md:justify-start">
-                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 mr-2" />
-                    Pros
-                  </h4>
-                  <ul className="space-y-2">
-                    {topCasinoExtended.pros.map((pro, index) => (
-                      <li key={index} className="text-gray-300 text-xs md:text-sm flex items-start">
-                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                        {pro}
-                      </li>
+              {/* Desktop Layout (lg and up) */}
+              <div className="hidden lg:flex">
+                <div className="flex items-center justify-between gap-0 w-full">
+                  {/* Left Column: Rank + Casino Info */}
+                  <div className="flex items-center gap-6 w-72">
+                    {/* Rank */}
+                    <div className="flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl bg-yellow-400 text-black opacity-100 bg-opacity-100 relative z-10">
+                      1
+                    </div>
+
+                    {/* Casino Info Column */}
+                    <div className="text-center flex-1">
+                      {/* Logo */}
+                      <div className="bg-transparent rounded p-3 shadow-sm mb-2 mt-3 mx-auto w-fit relative z-10">
+                        <img
+                          src={topCasino.logo || "/placeholder.svg"}
+                          alt={`${topCasino.name} logo`}
+                          className="h-24 w-auto"
+                        />
+                      </div>
+
+                      {/* Rating under logo */}
+                      <div className="flex items-center justify-center gap-3">
+                        <div className="flex items-center gap-1">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className={`h-5 w-5 ${i < Math.floor(topCasino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"}`}
+                            />
+                          ))}
+                        </div>
+                        <span className="text-white font-semibold text-2xl">{topCasino.rating}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Center Column: Bonus only */}
+                  <div className="text-center px-0 w-82">
+                    {/* Bonus */}
+                    <div className="mb-4">
+                      <div className="flex items-center justify-center gap-2 text-red-500 mb-3">
+                        <span className="text-xl font-medium">WELCOME BONUS</span>
+                      </div>
+                      <div className="text-white font-bold shadow-xl text-3xl leading-tight">{topCasino.bonus}</div>
+                    </div>
+                  </div>
+
+                  {/* Features Column */}
+                  <div className="flex flex-col items-center gap-3 w-32">
+                    {topCasinoExtended.features.map((feature, index) => (
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="border-red-900/70 text-gray-300 bg-red-950 text-sm px-3 py-2 text-center justify-center whitespace-nowrap w-36 opacity-100 relative z-10 font-bold"
+                      >
+                        {feature}
+                      </Badge>
                     ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-red-500 font-semibold mb-3 flex items-center justify-center md:justify-start">
-                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 mr-2" />
-                    Cons
-                  </h4>
-                  <ul className="space-y-2">
-                    {topCasinoExtended.cons.map((con, index) => (
-                      <li key={index} className="text-gray-300 text-xs md:text-sm flex items-start">
-                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                        {con}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+                  </div>
 
-            {/* Features and CTA */}
-            <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-gray-700">
-              <div className="flex flex-wrap gap-1 md:gap-2 justify-center mb-4 md:mb-6">
-                {topCasinoExtended.features.map((feature, index) => (
-                  <Badge
-                    key={index}
-                    variant="outline"
-                    className="border-yellow-400/50 text-gray-300 bg-yellow-400/10 text-xs"
-                  >
-                    {feature}
-                  </Badge>
-                ))}
+                  {/* Right Column: Button */}
+                  <div className="w-48">
+                    <Button
+                      className="bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg font-semibold px-4 py-4 text-lg w-full h-auto opacity-100 bg-opacity-100 relative z-10"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handleCardClick(topCasino.url)
+                      }}
+                    >
+                      GET BONUS
+                    </Button>
+                  </div>
+                </div>
               </div>
-
-              <div className="text-center">
-                <Button
-                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 md:px-8 py-2 md:py-3 text-sm md:text-lg w-full md:w-auto"
-                  onClick={() => window.open(topCasino.url, "_blank", "noopener,noreferrer")}
-                >
-                  Play at {topCasino.name}
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   )

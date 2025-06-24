@@ -186,7 +186,7 @@ export function CasinoRankings() {
                           handleCardClick(casino.url)
                         }}
                       >
-                        Claim
+                        GET BONUS
                       </Button>
                     </div>
                   </div>
