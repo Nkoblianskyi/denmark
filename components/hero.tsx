@@ -3,13 +3,13 @@ import { Advantages } from "./advantages"
 export function Hero() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat py-8 md:py-12"
-      style={{ backgroundImage: "url('/bg.jpg')" }}
+      className="relative bg-cover bg-top bg-no-repeat py-8 md:py-12 max-w-[1440px] mx-auto"
+      style={{ backgroundImage: "url('/bg-3.png')" }}
     >
       {/* Black semi-transparent overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Content */}
+      {/* Content */}5
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="flex items-center justify-center mb-6">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">

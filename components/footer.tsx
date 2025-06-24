@@ -57,7 +57,7 @@ export function Footer() {
               href="https://www.gambleaware.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity bg-white rounded-md p-2"
             >
               <img
                 src="/gamble.webp"
@@ -77,7 +77,7 @@ export function Footer() {
               href="https://www.vic.gov.au"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity bg-white rounded-md p-2"
             >
               <img
                 src="/victoria.svg"
@@ -101,7 +101,7 @@ export function Footer() {
               href="https://www.gamcare.org.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity bg-white rounded-md p-2"
             >
               <img
                 src="/gamecare.svg"

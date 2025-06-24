@@ -1,4 +1,5 @@
 import { Gift, CreditCard, Headphones, Shield } from "lucide-react"
+import Image from "next/image"
 
 export function Advantages() {
   const advantages = [
@@ -35,12 +36,10 @@ export function Advantages() {
           {advantages.map((advantage, index) => (
             <div key={index} className="text-center">
               <div
-                className={`inline-flex items-center justify-center w-8 h-8 ${advantage.bg} rounded-full mb-2 border`}
+                className={`inline-flex items-center justify-center w-8 h-8 mb-2`}
               >
                 {advantage.title === "Licensed & Safe" ? (
-                  <div className="w-6 h-4 bg-gradient-to-r from-blue-600 via-white to-red-600 rounded shadow-sm flex items-center justify-center">
-                    <span className="text-xs font-bold text-blue-800">AU</span>
-                  </div>
+                  <Image src='/flag.png' width={24} height={24} alt={advantage.title} className="h-8 w-8" />
                 ) : (
                   <advantage.icon className={`h-4 w-4 ${advantage.color}`} />
                 )}
