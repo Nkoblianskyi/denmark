@@ -1,6 +1,27 @@
+"use client"
+
 import { Advantages } from "./advantages"
 
 export function Hero() {
+  // Get current month and year
+  const currentDate = new Date()
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ]
+  const currentMonth = monthNames[currentDate.getMonth()]
+  const currentYear = currentDate.getFullYear()
+
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-4 md:py-12 max-h-[200px] md:max-h-none overflow-hidden"
@@ -29,6 +50,13 @@ export function Hero() {
 
         <div className="hidden md:block">
           <Advantages />
+        </div>
+
+        {/* Rating update info */}
+        <div className="mt-2 md:mt-4">
+          <p className="text-xs text-gray-400">
+            Rankings updated monthly • Last update: {currentMonth} {currentYear}
+          </p>
         </div>
       </div>
     </section>
