@@ -19,8 +19,8 @@ export function CasinoRankings() {
             <Card
               key={casino.rank}
               className={`bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 relative overflow-hidden ${casino.isTopChoice
-                ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
-                : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
+                  ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
+                  : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
                 }`}
               onClick={() => handleCardClick(casino.url)}
             >
@@ -83,12 +83,126 @@ export function CasinoRankings() {
                     <span className="text-yellow-500 font-semibold text-sm">{casino.rating}</span>
                   </div>
 
+                  {/* Features Column */}
+                  <div className="flex flex-col gap-2 w-40">
+                    {casino.rank === 1 && (
+                      <>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Instant Payouts
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Mobile App
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          5% Cashback
+                        </Badge>
+                      </>
+                    )}
+                    {casino.rank === 2 && (
+                      <>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Crypto Payments
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Weekly Bonuses
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Live Support
+                        </Badge>
+                      </>
+                    )}
+                    {casino.rank === 3 && (
+                      <>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Fast Withdrawals
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          VIP Program
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Free Spins
+                        </Badge>
+                      </>
+                    )}
+                    {casino.rank === 4 && (
+                      <>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          PayPal Support
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Daily Rewards
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Mobile Optimized
+                        </Badge>
+                      </>
+                    )}
+                    {casino.rank === 5 && (
+                      <>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Low Wagering
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          Reload Bonuses
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                        >
+                          24/7 Chat
+                        </Badge>
+                      </>
+                    )}
+                  </div>
+
                   {/* Button - Center */}
                   <div className="text-center">
                     <Button
                       className={`${casino.isTopChoice
-                        ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                        : "bg-blue-800 hover:bg-blue-900 text-white"
+                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                          : "bg-blue-800 hover:bg-blue-900 text-white"
                         } font-semibold px-6 py-2 text-sm w-full max-w-xs`}
                       onClick={(e) => {
                         e.stopPropagation()
@@ -108,8 +222,8 @@ export function CasinoRankings() {
                       {/* Rank */}
                       <div
                         className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg ${casino.isTopChoice
-                          ? "bg-yellow-400 text-black shadow-lg"
-                          : "bg-red-800 text-white border border-red-900/50"
+                            ? "bg-yellow-400 text-black shadow-lg"
+                            : "bg-red-800 text-white border border-red-900/50"
                           }`}
                       >
                         {casino.rank}
@@ -118,7 +232,6 @@ export function CasinoRankings() {
                       {/* Casino Info Column */}
                       <div className="text-center flex-1">
                         {/* Casino Name */}
-
 
                         {/* Logo */}
                         <div className="bg-white rounded p-2 shadow-sm mb-2 mx-auto w-fit">
@@ -159,23 +272,124 @@ export function CasinoRankings() {
 
                     {/* Features Column */}
                     <div className="flex flex-col gap-2 w-40">
-                      {casino.features.map((feature, index) => (
-                        <Badge
-                          key={index}
-                          variant="outline"
-                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center whitespace-nowrap"
-                        >
-                          {feature}
-                        </Badge>
-                      ))}
+                      {casino.rank === 1 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Instant Payouts
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Mobile App
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            5% Cashback
+                          </Badge>
+                        </>
+                      )}
+                      {casino.rank === 2 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Crypto Payments
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Weekly Bonuses
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Live Support
+                          </Badge>
+                        </>
+                      )}
+                      {casino.rank === 3 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Fast Withdrawals
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            VIP Program
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Free Spins
+                          </Badge>
+                        </>
+                      )}
+                      {casino.rank === 4 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            PayPal Support
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Daily Rewards
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Mobile Optimized
+                          </Badge>
+                        </>
+                      )}
+                      {casino.rank === 5 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Low Wagering
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            Reload Bonuses
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-2 py-1 text-center"
+                          >
+                            24/7 Chat
+                          </Badge>
+                        </>
+                      )}
                     </div>
 
                     {/* Right Column: Button */}
                     <div className="w-24">
                       <Button
                         className={`${casino.isTopChoice
-                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                          : "bg-blue-800 hover:bg-blue-900 text-white"
+                            ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                            : "bg-blue-800 hover:bg-blue-900 text-white"
                           } font-semibold px-3 py-3 text-sm w-full h-auto`}
                         onClick={(e) => {
                           e.stopPropagation()
@@ -196,8 +410,8 @@ export function CasinoRankings() {
                       {/* Rank */}
                       <div
                         className={`flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl ${casino.isTopChoice
-                          ? "bg-yellow-400 text-black shadow-lg"
-                          : "bg-red-800 text-white border border-red-900/50"
+                            ? "bg-yellow-400 text-black shadow-lg"
+                            : "bg-red-800 text-white border border-red-900/50"
                           }`}
                       >
                         {casino.rank}
@@ -206,7 +420,6 @@ export function CasinoRankings() {
                       {/* Casino Info Column */}
                       <div className="text-center flex-1">
                         {/* Casino Name */}
-
 
                         {/* Logo */}
                         <div className="bg-white rounded p-3 shadow-sm mb-3 mx-auto w-fit">
@@ -247,23 +460,124 @@ export function CasinoRankings() {
 
                     {/* Features Column */}
                     <div className="flex flex-col gap-3 w-38">
-                      {casino.features.map((feature, index) => (
-                        <Badge
-                          key={index}
-                          variant="outline"
-                          className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center whitespace-nowrap"
-                        >
-                          {feature}
-                        </Badge>
-                      ))}
+                      {casino.rank === 1 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Instant Payouts
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Mobile App
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            5% Cashback
+                          </Badge>
+                        </>
+                      )}
+                      {casino.rank === 2 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Crypto Payments
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Weekly Bonuses
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Live Support
+                          </Badge>
+                        </>
+                      )}
+                      {casino.rank === 3 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Fast Withdrawals
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            VIP Program
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Free Spins
+                          </Badge>
+                        </>
+                      )}
+                      {casino.rank === 4 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            PayPal Support
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Daily Rewards
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Mobile Optimized
+                          </Badge>
+                        </>
+                      )}
+                      {casino.rank === 5 && (
+                        <>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Low Wagering
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            Reload Bonuses
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-red-900/70 text-gray-300 bg-red-950/50 text-xs px-3 py-2 text-center"
+                          >
+                            24/7 Chat
+                          </Badge>
+                        </>
+                      )}
                     </div>
 
                     {/* Right Column: Button */}
                     <div className="w-48">
                       <Button
                         className={`${casino.isTopChoice
-                          ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
-                          : "bg-blue-800 hover:bg-blue-900 text-white"
+                            ? "bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg"
+                            : "bg-blue-800 hover:bg-blue-900 text-white"
                           } font-semibold px-4 py-4 text-lg w-full h-auto`}
                         onClick={(e) => {
                           e.stopPropagation()
