@@ -11,12 +11,12 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-3 mb-4 hover:opacity-80 transition-opacity">
               <Crown className="h-8 w-8 text-yellow-500" />
               <span className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
-                Bedste Casinoer Danmark
+                Best Casinos Australia
               </span>
             </Link>
             <p className="text-gray-400 text-sm">
-              Din pålidelige guide til de bedste online casinoer i Danmark. Vi anmelder og rangerer kun licenserede og
-              sikre operatører.
+              Your trusted guide to the best online casinos in Australia. We review and rank only licensed and secure
+              operators.
             </p>
           </div>
 
@@ -26,7 +26,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="#rankings" className="text-gray-400 hover:text-yellow-500 transition-colors">
-                  Casino Rangeringer
+                  Casino Rankings
                 </Link>
               </li>
             </ul>
@@ -34,16 +34,16 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Juridisk</h4>
+            <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/privacy-policy" className="text-gray-400 hover:text-yellow-500 transition-colors">
-                  Privatlivspolitik
+                  Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link href="/cookie-policy" className="text-gray-400 hover:text-yellow-500 transition-colors">
-                  Cookie Politik
+                  Cookie Policy
                 </Link>
               </li>
             </ul>
@@ -54,36 +54,60 @@ export function Footer() {
           {/* Organization Logos */}
           <div className="flex flex-wrap justify-center items-center gap-8 mb-6">
             <a
-              href="https://www.spillemyndigheden.dk"
+              href="https://www.gambleaware.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity bg-white rounded-md p-2"
+            >
+              <img
+                src="/gamble.webp"
+                alt="Gamble Aware"
+                className="h-10 w-auto"
+              />
+            </a>
+            <a
+              href="https://www.resetapp.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img src="/reset.svg" alt="Reset App" className="h-10 w-auto" />
+            </a>
+            <a
+              href="https://www.vic.gov.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity bg-white rounded-md p-2"
+            >
+              <img
+                src="/victoria.svg"
+                alt="Victoria Government"
+                className="h-10 w-auto"
+              />
+            </a>
+            <a
+              href="https://www.gamblershelp.com.au"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
               <img
-                src="/placeholder.svg?height=40&width=120&text=Spillemyndigheden"
-                alt="Spillemyndigheden"
+                src="/gamblershelp.svg"
+                alt="Gamblers Help"
                 className="h-10 w-auto"
               />
             </a>
             <a
-              href="https://www.begambleaware.org"
+              href="https://www.gamcare.org.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity bg-white rounded-md p-2"
             >
               <img
-                src="/placeholder.svg?height=40&width=120&text=BeGambleAware"
-                alt="BeGambleAware"
+                src="/gamecare.svg"
+                alt="GamCare"
                 className="h-10 w-auto"
               />
-            </a>
-            <a
-              href="https://www.ludomani.dk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              <img src="/placeholder.svg?height=40&width=120&text=Ludomani" alt="Ludomani" className="h-10 w-auto" />
             </a>
           </div>
 
@@ -95,7 +119,7 @@ export function Footer() {
           </div>
 
           <p className="text-gray-500 text-sm text-center">
-            © 2025 Bedste Casinoer Danmark. Alle rettigheder forbeholdes. | Spil Ansvarligt
+            © 2025 Best Casinos Australia. All rights reserved. | Gamble Responsibly
           </p>
         </div>
       </div>
