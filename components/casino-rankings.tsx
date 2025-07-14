@@ -26,17 +26,17 @@ export function CasinoRankings() {
             >
               <CardContent className="p-4">
                 {casino.isTopChoice && (
-                  <Badge className="absolute -top-1 -left-1 bg-yellow-400 text-black font-black text-xs px-3 py-1 z-10 rounded-sm">
+                  <Badge className="absolute -top-1 -left-1 bg-yellow-400 text-black font-bold text-xs px-3 py-1 z-10 rounded-sm">
                     BEDST BEDØMTE CASINO
                   </Badge>
                 )}
                 {casino.rank === 2 && (
-                  <Badge className="absolute -top-1 -left-1 bg-red-800 text-white font-black text-xs px-3 py-1 z-10 rounded-sm">
+                  <Badge className="absolute -top-1 -left-1 bg-red-800 text-white font-bold text-xs px-3 py-1 z-10 rounded-sm">
                     SPILLERENS VALG
                   </Badge>
                 )}
                 {casino.rank === 3 && (
-                  <Badge className="absolute -top-1 -left-1 bg-red-800 text-white font-black text-xs px-3 py-1 z-10 rounded-sm">
+                  <Badge className="absolute -top-1 -left-1 bg-red-800 text-white font-bold text-xs px-3 py-1 z-10 rounded-sm">
                     TENDENSER
                   </Badge>
                 )}

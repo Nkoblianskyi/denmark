@@ -94,7 +94,7 @@ export function HowWeRank() {
             onClick={() => handleCardClick(topCasino.url)}
           >
             <CardContent className="p-4">
-              <Badge className="absolute -top-1 -left-1 bg-yellow-400 text-black font-black text-xs px-3 py-1 z-10 rounded-sm">
+              <Badge className="absolute -top-1 -left-1 bg-yellow-400 text-black font-bold text-xs px-3 py-1 z-10 rounded-sm">
                 VORES FAVORIT
               </Badge>
 

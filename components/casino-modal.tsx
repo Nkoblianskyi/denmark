@@ -68,10 +68,10 @@ export function CasinoModal() {
 
             {/* Bonus */}
             <div className="mb-4 sm:mb-6">
-              <p className="text-white text-sm sm:text-base mb-2 font-bold">BONUS</p>
+              <p className="text-white text-lg sm:text-lg mb-2 font-bold">BONUS</p>
               <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1">
-                <span className="text-white">700% opp till</span>
-                <span className="text-yellow-400">116 000 kr. + 725 F</span>
+                <span className="text-white">700% opp till </span>
+                <span className="text-yellow-400">116 000 kr + 725 F</span>
               </div>
             </div>
 

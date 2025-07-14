@@ -65,34 +65,34 @@ export function Footer() {
               />
             </a>
             <a
-              href="https://www.resetapp.com.au"
+              href="https://ludomani.dk/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <img src="/reset.svg" alt="Reset App" className="h-10 w-auto" />
+              <img src="/ludomani.png" alt="RCenter for Ludomani" className="h-10 w-auto" />
             </a>
             <a
-              href="https://www.vic.gov.au"
+              href="https://stopspillet.dk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity bg-white rounded-md p-2"
+              className="hover:opacity-80 transition-opacity p-2"
             >
               <img
-                src="/victoria.svg"
-                alt="Victoria Government"
+                src="/stopsillet.svg"
+                alt="Stop Spillet"
                 className="h-10 w-auto"
               />
             </a>
             <a
-              href="https://www.gamblershelp.com.au"
+              href="https://www.rofus.nu/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
               <img
-                src="/gamblershelp.svg"
-                alt="Gamblers Help"
+                src="/rofus.png"
+                alt="Rofus"
                 className="h-10 w-auto"
               />
             </a>
