@@ -11,12 +11,11 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-3 mb-4 hover:opacity-80 transition-opacity">
               <Crown className="h-8 w-8 text-yellow-500" />
               <span className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
-                Best Casinos Australia
+                Bedste Casinoer Danmark
               </span>
             </Link>
             <p className="text-gray-400 text-sm">
-              Your trusted guide to the best online casinos in Australia. We review and rank only licensed and secure
-              operators.
+              Din pålidelige guide til de bedste online casinoer i Danmark. Vi anmelder og rangerer kun licenserede og sikre operatører.
             </p>
           </div>
 
@@ -26,7 +25,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="#rankings" className="text-gray-400 hover:text-yellow-500 transition-colors">
-                  Casino Rankings
+                  Casino Rangeringer
                 </Link>
               </li>
             </ul>
@@ -34,16 +33,16 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Legal</h4>
+            <h4 className="text-white font-semibold mb-4">Juridisk</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/privacy-policy" className="text-gray-400 hover:text-yellow-500 transition-colors">
-                  Privacy Policy
+                  Privatlivspolitik
                 </Link>
               </li>
               <li>
                 <Link href="/cookie-policy" className="text-gray-400 hover:text-yellow-500 transition-colors">
-                  Cookie Policy
+                  Cookie Politik
                 </Link>
               </li>
             </ul>
@@ -119,7 +118,7 @@ export function Footer() {
           </div>
 
           <p className="text-gray-500 text-sm text-center">
-            © 2025 Best Casinos Australia. All rights reserved. | Gamble Responsibly
+            © 2025 Bedste Casinoer Danmark. Alle rettigheder forbeholdes. | Spil Ansvarligt
           </p>
         </div>
       </div>
