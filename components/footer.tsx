@@ -73,7 +73,7 @@ export function Footer() {
               <img src="/ludomani.png" alt="RCenter for Ludomani" className="h-10 w-auto" />
             </a>
             <a
-              href="https://stopspillet.dk/"
+              href="https://www.stopspillet.dk/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity p-2"
