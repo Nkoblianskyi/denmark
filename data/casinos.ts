@@ -35,7 +35,7 @@ export const casinos: Casino[] = [
     logo: "/betiton.png",
     rating: 9.2,
     bonus: "150% opp til 30 000 kr. + 200 FS",
-    features: ["Hurtige Udbetalinger", "VIP Program", "Gratis Spins"],
+    features: ["Eksklusive Spil", "VIP Program", "Gratis Spins"],
     url: "https://jackpotcity.com",
   },
   {

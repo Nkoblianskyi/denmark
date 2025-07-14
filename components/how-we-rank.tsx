@@ -138,7 +138,7 @@ export function HowWeRank() {
                   {/* Bonus */}
                   <div className="text-center flex-1 ml-4">
                     <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                      <span className="text-sm font-medium">BONUS</span>
+                      <span className="text-sm font-medium">VELKOMST BONUS</span>
                     </div>
                     <div className="text-white font-bold text-xl leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
                       {topCasino.bonus}
@@ -205,7 +205,7 @@ export function HowWeRank() {
                     {/* Bonus */}
                     <div className="mb-3">
                       <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                        <span className="text-sm font-medium">BONUS</span>
+                        <span className="text-sm font-medium">VELKOMST BONUS</span>
                       </div>
                       <div className="text-white font-bold text-lg leading-tight">{topCasino.bonus}</div>
                     </div>
@@ -284,7 +284,7 @@ export function HowWeRank() {
                     {/* Bonus */}
                     <div className="mb-4">
                       <div className="flex items-center justify-center gap-2 text-red-500 mb-3">
-                        <span className="text-xl font-medium">BONUS</span>
+                        <span className="text-xl font-medium">VELKOMST BONUS</span>
                       </div>
                       <div className="text-white font-bold shadow-xl text-3xl leading-tight">{topCasino.bonus}</div>
                     </div>

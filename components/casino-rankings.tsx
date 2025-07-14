@@ -27,17 +27,17 @@ export function CasinoRankings() {
               <CardContent className="p-4">
                 {casino.isTopChoice && (
                   <Badge className="absolute -top-1 -left-1 bg-yellow-400 text-black font-black text-xs px-3 py-1 z-10 rounded-sm">
-                    TOP CASINO
+                    BEDST BEDØMTE CASINO
                   </Badge>
                 )}
                 {casino.rank === 2 && (
                   <Badge className="absolute -top-1 -left-1 bg-red-800 text-white font-black text-xs px-3 py-1 z-10 rounded-sm">
-                    POPULÆRT
+                    SPILLERENS VALG
                   </Badge>
                 )}
                 {casino.rank === 3 && (
                   <Badge className="absolute -top-1 -left-1 bg-red-800 text-white font-black text-xs px-3 py-1 z-10 rounded-sm">
-                    TRENDING
+                    TENDENSER
                   </Badge>
                 )}
                 <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -78,7 +78,7 @@ export function CasinoRankings() {
                     </div>
 
                     {/* Bonus */}
-                    <div className="text-center flex-1 ml-4">
+                    <div className="text-center flex-1 ml-4 mt-2">
                       <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
                         <span className="text-sm font-medium">VELKOMST BONUS</span>
                       </div>
