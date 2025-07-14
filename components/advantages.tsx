@@ -1,17 +1,16 @@
 import { Gift, CreditCard, Headphones, Shield } from "lucide-react"
-import Image from "next/image"
 
 export function Advantages() {
   const advantages = [
     {
       icon: Gift,
-      title: "Exclusive Bonuses",
+      title: "Eksklusive Bonusser",
       color: "text-yellow-400",
       bg: "bg-yellow-400/20 border-yellow-400/30",
     },
     {
       icon: CreditCard,
-      title: "Fast Payouts",
+      title: "Hurtige Udbetalinger",
       color: "text-yellow-400",
       bg: "bg-yellow-400/20 border-yellow-400/30",
     },
@@ -23,8 +22,8 @@ export function Advantages() {
     },
     {
       icon: Shield,
-      title: "Licensed & Safe",
-      color: "text-blue-500",
+      title: "Licenseret & Sikkert",
+      color: "text-red-600",
       bg: "/flag.png",
     },
   ]
@@ -36,14 +35,10 @@ export function Advantages() {
           {advantages.map((advantage, index) => (
             <div key={index} className="text-center">
               <div className={`inline-flex items-center justify-center w-4 sm:w-8 h-4 sm:h-8 mb-1 sm:mb-2`}>
-                {advantage.title === "Licensed & Safe" ? (
-                  <Image
-                    src="/flag.png"
-                    width={24}
-                    height={24}
-                    alt={advantage.title}
-                    className="h-4 sm:h-8 w-4 sm:w-8"
-                  />
+                {advantage.title === "Licenseret & Sikkert" ? (
+                  <div className="h-4 sm:h-8 w-4 sm:w-8 bg-red-600 rounded-sm flex items-center justify-center">
+                    <span className="text-white text-xs sm:text-sm font-bold">DK</span>
+                  </div>
                 ) : (
                   <advantage.icon className={`h-4 sm:h-8 w-4 sm:w-8 ${advantage.color}`} />
                 )}

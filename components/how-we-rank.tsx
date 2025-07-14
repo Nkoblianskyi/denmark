@@ -9,25 +9,43 @@ import { getTopCasino } from "@/data/casinos"
 export function HowWeRank() {
   const criteria = [
     {
-      title: "Licensing & Security",
-      description: "We only review casinos with valid licenses from reputable authorities",
+      title: "Licens & Sikkerhed",
+      description: "Vi anmelder kun casinoer med gyldige licenser fra anerkendte myndigheder",
+      weight: "25%",
     },
     {
-      title: "Game Selection",
-      description: "Variety and quality of slots, table games, and live dealer options",
+      title: "Spil Udvalg",
+      description: "Variation og kvalitet af slots, bordspil og live dealer muligheder",
+      weight: "20%",
     },
     {
-      title: "Bonuses & Promotions",
-      description: "Welcome bonuses, ongoing promotions, and fair wagering requirements",
+      title: "Bonusser & Kampagner",
+      description: "Velkomstbonusser, løbende kampagner og fair omsætningskrav",
+      weight: "20%",
+    },
+    {
+      title: "Kundesupport",
+      description: "24/7 tilgængelighed, svartider og supportkvalitet",
+      weight: "15%",
+    },
+    {
+      title: "Betalingsmetoder",
+      description: "Hurtige udbetalinger, flere betalingsmuligheder og lave gebyrer",
+      weight: "10%",
+    },
+    {
+      title: "Brugeroplevelse",
+      description: "Hjemmeside design, mobil kompatibilitet og overordnet brugervenlighed",
+      weight: "10%",
     },
   ]
 
   const topCasino = getTopCasino()
   const topCasinoExtended = {
     ...topCasino,
-    features: ["MGA License", "Crypto Payments", "Live Casino", "24/7 Support"],
-    pros: ["Excellent game variety", "Fast payouts", "Professional support", "Mobile optimized"],
-    cons: ["High wagering requirements", "Limited live chat hours"],
+    features: ["MGA Licens", "Crypto Betalinger", "Live Casino", "24/7 Support"],
+    pros: ["Fremragende spil variation", "Hurtige udbetalinger", "Professionel support", "Mobil optimeret"],
+    cons: ["Høje omsætningskrav", "Begrænsede live chat timer"],
   }
 
   const handleCardClick = (url: string) => {
@@ -40,11 +58,11 @@ export function HowWeRank() {
         {/* How We Rank Section */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            How We <span className="text-yellow-400">Rank Casinos</span>
+            Sådan <span className="text-yellow-400">Rangerer Vi Casinoer</span>
           </h2>
           <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
-            Our expert team uses a comprehensive scoring system to evaluate every aspect of online casinos, ensuring you
-            get the most accurate and trustworthy rankings.
+            Vores ekspertteam bruger et omfattende scoringssystem til at evaluere alle aspekter af online casinoer,
+            hvilket sikrer, at du får de mest nøjagtige og pålidelige rangeringer.
           </p>
         </div>
 
@@ -54,6 +72,7 @@ export function HowWeRank() {
               <CardContent className="p-4 md:p-6 text-center">
                 <h3 className="text-base md:text-lg font-semibold text-white mb-2">{criterion.title}</h3>
                 <p className="text-gray-400 text-xs md:text-sm mb-3">{criterion.description}</p>
+                <Badge className="bg-red-600 text-white font-semibold text-xs md:text-sm">{criterion.weight}</Badge>
               </CardContent>
             </Card>
           ))}
@@ -62,11 +81,10 @@ export function HowWeRank() {
         {/* Our Choice Section */}
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Our <span className="text-yellow-400">Top Choice</span>
+            Vores <span className="text-yellow-400">Topvalg</span>
           </h2>
           <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
-            After thorough testing and evaluation, this casino stands out as our #1 recommendation for Australian
-            players.
+            Efter grundig test og evaluering skiller dette casino sig ud som vores #1 anbefaling til danske spillere.
           </p>
         </div>
 
@@ -77,7 +95,7 @@ export function HowWeRank() {
           >
             <CardContent className="p-4">
               <Badge className="absolute -top-1 -left-1 bg-yellow-400 text-black font-black text-xs px-3 py-1 z-10 rounded-sm">
-                OUR FAVORITE
+                VORES FAVORIT
               </Badge>
 
               <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -120,7 +138,7 @@ export function HowWeRank() {
                   {/* Bonus */}
                   <div className="text-center flex-1 ml-4">
                     <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                      <span className="text-sm font-medium">WELCOME BONUS</span>
+                      <span className="text-sm font-medium">BONUS</span>
                     </div>
                     <div className="text-white font-bold text-xl leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
                       {topCasino.bonus}
@@ -131,13 +149,17 @@ export function HowWeRank() {
                 {/* Button - Center */}
                 <div className="text-center">
                   <Button
-                    className="bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg font-semibold px-6 py-2 text-sm w-full max-w-xs opacity-100 bg-opacity-100 relative z-10"
+                    style={{
+                      backgroundColor: "#fbbf24",
+                      color: "#000000",
+                    }}
+                    className="font-semibold px-4 py-2 text-xs w-full max-w-xs relative z-10 shadow-lg hover:opacity-90 transition-opacity"
                     onClick={(e) => {
                       e.stopPropagation()
                       handleCardClick(topCasino.url)
                     }}
                   >
-                    GET BONUS
+                    SPIL NU
                   </Button>
                 </div>
               </div>
@@ -183,7 +205,7 @@ export function HowWeRank() {
                     {/* Bonus */}
                     <div className="mb-3">
                       <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                        <span className="text-sm font-medium">WELCOME BONUS</span>
+                        <span className="text-sm font-medium">BONUS</span>
                       </div>
                       <div className="text-white font-bold text-lg leading-tight">{topCasino.bonus}</div>
                     </div>
@@ -203,15 +225,19 @@ export function HowWeRank() {
                   </div>
 
                   {/* Right Column: Button */}
-                  <div className="w-24">
+                  <div className="w-28">
                     <Button
-                      className="bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg font-semibold px-3 py-3 text-sm w-full h-auto opacity-100 bg-opacity-100 relative z-10"
+                      style={{
+                        backgroundColor: "#fbbf24",
+                        color: "#000000",
+                      }}
+                      className="font-semibold px-2 py-3 text-xs w-full h-auto relative z-10 shadow-lg hover:opacity-90 transition-opacity"
                       onClick={(e) => {
                         e.stopPropagation()
                         handleCardClick(topCasino.url)
                       }}
                     >
-                      GET BONUS
+                      SPIL NU
                     </Button>
                   </div>
                 </div>
@@ -258,7 +284,7 @@ export function HowWeRank() {
                     {/* Bonus */}
                     <div className="mb-4">
                       <div className="flex items-center justify-center gap-2 text-red-500 mb-3">
-                        <span className="text-xl font-medium">WELCOME BONUS</span>
+                        <span className="text-xl font-medium">BONUS</span>
                       </div>
                       <div className="text-white font-bold shadow-xl text-3xl leading-tight">{topCasino.bonus}</div>
                     </div>
@@ -278,15 +304,19 @@ export function HowWeRank() {
                   </div>
 
                   {/* Right Column: Button */}
-                  <div className="w-48">
+                  <div className="w-32">
                     <Button
-                      className="bg-yellow-400 hover:bg-yellow-500 text-black shadow-lg font-semibold px-4 py-4 text-lg w-full h-auto opacity-100 bg-opacity-100 relative z-10"
+                      style={{
+                        backgroundColor: "#fbbf24",
+                        color: "#000000",
+                      }}
+                      className="font-semibold px-3 py-4 text-sm w-full h-auto relative z-10 shadow-lg hover:opacity-90 transition-opacity"
                       onClick={(e) => {
                         e.stopPropagation()
                         handleCardClick(topCasino.url)
                       }}
                     >
-                      GET BONUS
+                      SPIL NU
                     </Button>
                   </div>
                 </div>

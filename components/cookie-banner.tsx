@@ -34,12 +34,12 @@ export function CookieBanner() {
           <div className="flex items-start space-x-3">
             <Cookie className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
             <div>
-              <h4 className="text-white font-semibold mb-1">We use cookies</h4>
+              <h4 className="text-white font-semibold mb-1">Vi bruger cookies</h4>
               <p className="text-gray-300 text-sm">
-                We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All",
-                you consent to our use of cookies.
+                Vi bruger cookies til at forbedre din browseroplevelse og analysere vores trafik. Ved at klikke
+                "Accepter Alle" giver du samtykke til vores brug af cookies.
                 <Link href="/cookie-policy" className="text-yellow-500 hover:underline ml-1">
-                  Learn more
+                  Læs mere
                 </Link>
               </p>
             </div>
@@ -50,12 +50,12 @@ export function CookieBanner() {
               variant="outline"
               size="sm"
               onClick={rejectCookies}
-              className="border-gray-600 hover:bg-gray-800 text-slate-500"
+              className="border-gray-600 hover:bg-gray-800 text-slate-500 bg-transparent"
             >
-              Reject
+              Afvis
             </Button>
             <Button size="sm" onClick={acceptCookies} className="bg-yellow-500 hover:bg-yellow-600 text-black">
-              Accept All
+              Accepter Alle
             </Button>
           </div>
         </div>

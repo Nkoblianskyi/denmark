@@ -33,13 +33,13 @@ export function CasinoModal() {
           <div
             className="relative text-black text-center py-3 px-4 sm:py-4 sm:px-8 font-black text-sm sm:text-base md:text-lg shadow-lg h-12 sm:h-14 md:h-16 flex items-center justify-center w-full"
             style={{
-              backgroundImage: "url('/line.png')",
+              backgroundImage: "url('/images/ribbon-banner.png')",
               backgroundSize: "100% 100%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
             }}
           >
-            <p className="mb-3">EDITOR'S CHOICE THIS WEEK</p>
+            REDAKTØRENS VALG DENNE UGE
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export function CasinoModal() {
             }}
             className="absolute top-3 right-3 text-gray-400 hover:text-white z-20"
           >
-            <X className="h-4 w-4 sm:h-5 sm:w-5" />
+            <X className="h-4 w-4 sm:h-5 sm:w-5 my-2.5" />
           </button>
 
           <CardContent className="p-4 sm:p-6 text-center bg-gray-900">
@@ -68,9 +68,10 @@ export function CasinoModal() {
 
             {/* Bonus */}
             <div className="mb-4 sm:mb-6">
-              <p className="text-white text-sm sm:text-base mb-2 font-bold">WELCOME BONUS</p>
+              <p className="text-white text-sm sm:text-base mb-2 font-bold">BONUS</p>
               <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1">
-                <span className="text-yellow-400">{topCasino.bonus}</span>
+                <span className="text-white">100% op til </span>
+                <span className="text-yellow-400">1000 kr + 200 FS</span>
               </div>
             </div>
 
@@ -95,10 +96,10 @@ export function CasinoModal() {
                 handleModalClick()
               }}
             >
-              GET BONUS
+              SPIL NU
             </Button>
 
-            <p className="text-xs text-gray-500 text-center mt-2 sm:mt-3">* Terms and conditions apply. 18+ only.</p>
+            <p className="text-xs text-gray-500 text-center mt-2 sm:mt-3">* Vilkår og betingelser gælder. Kun 18+.</p>
           </CardContent>
         </Card>
       </div>
