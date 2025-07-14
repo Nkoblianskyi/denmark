@@ -80,14 +80,11 @@ export function CasinoRankings() {
                     {/* Bonus */}
                     <div className="text-center flex-1 ml-4">
                       <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                        <span className="text-sm font-medium">BONUS</span>
+                        <span className="text-sm font-medium">VELKOMST BONUS</span>
                       </div>
                       <div>
-                        <div className="text-white font-bold text-[16px] leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
+                        <div className="text-white font-bold text-xl leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
                           {casino.bonus}
-                        </div>
-                        <div className="text-white font-bold text-[16px] leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
-                          {casino.bonusTwo}
                         </div>
                       </div>
                     </div>
@@ -100,7 +97,7 @@ export function CasinoRankings() {
                         backgroundColor: casino.isTopChoice ? "#fbbf24" : "#16a34a",
                         color: casino.isTopChoice ? "#000000" : "#ffffff",
                       }}
-                      className={`font-semibold px-4 py-2 text-xs w-full max-w-xs relative z-10 shadow-lg hover:opacity-90 transition-opacity`}
+                      className={`font-semibold px-4 py-2 text-sm w-full max-w-xs relative z-10 shadow-lg hover:opacity-90 transition-opacity`}
                       onClick={(e) => {
                         e.stopPropagation()
                         handleCardClick(casino.url)
@@ -156,7 +153,7 @@ export function CasinoRankings() {
                       {/* Bonus */}
                       <div className="mb-3">
                         <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
-                          <span className="text-sm font-medium">BONUS</span>
+                          <span className="text-sm font-medium">VELKOMST BONUS</span>
                         </div>
                         <div className="text-white font-bold text-lg leading-tight">{casino.bonus}</div>
                       </div>
@@ -239,10 +236,9 @@ export function CasinoRankings() {
                       {/* Bonus */}
                       <div className="mb-4">
                         <div className="flex items-center justify-center gap-2 text-red-500 mb-3">
-                          <span className="text-xl font-medium">BONUS</span>
+                          <span className="text-xl font-medium">VELKOMST BONUS</span>
                         </div>
                         <div className="text-white font-bold shadow-xl text-3xl leading-tight">{casino.bonus}</div>
-                        <div className="text-white font-bold shadow-xl text-3xl leading-tight">{casino.bonusTwo}</div>
                       </div>
                     </div>
 

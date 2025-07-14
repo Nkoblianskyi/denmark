@@ -4,7 +4,6 @@ export interface Casino {
   logo: string
   rating: number
   bonus: string
-  bonusTwo: string
   features: string[]
   isTopChoice?: boolean
   url: string
@@ -16,8 +15,7 @@ export const casinos: Casino[] = [
     name: " Boomerang Bet",
     logo: "/boomerang-bet.svg",
     rating: 9.8,
-    bonus: "700% opp til 100 000 kr + 500 FS",
-    bonusTwo: '',
+    bonus: "700% opp til 116 000 kr. + 725 FS",
     features: ["Lav Omsætning", "Mobil App", "5% Cashback"],
     isTopChoice: true,
     url: "https://royalvegas.com",
@@ -27,38 +25,37 @@ export const casinos: Casino[] = [
     name: "Betibet",
     logo: "/betsson.png",
     rating: 9.5,
-    bonus: "75% op til 750 kr + 100 FS",
-    bonusTwo: '',
+    bonus: "700% opp til 75 000 kr. + 725 FS",
     features: ["Crypto Betaling", "Ugentlige Bonus", "Live Support"],
     url: "https://spinpalace.com",
   },
-  // {
-  //   rank: 3,
-  //   name: "Jackpot City Casino",
-  //   logo: "/betiton.png",
-  //   rating: 9.2,
-  //   bonus: "50% op til 500 kr + 50 FS",
-  //   features: ["Hurtige Udbetalinger", "VIP Program", "Gratis Spins"],
-  //   url: "https://jackpotcity.com",
-  // },
-  // {
-  //   rank: 4,
-  //   name: "888 Casino",
-  //   logo: "/livescorebet.png",
-  //   rating: 9.0,
-  //   bonus: "100% op til 200 kr + 25 FS",
-  //   features: ["Mobil Casino", "Eksklusive Spil", "Sports Betting"],
-  //   url: "https://888casino.com",
-  // },
-  // {
-  //   rank: 5,
-  //   name: "LeoVegas Casino",
-  //   logo: "/gold-casino.svg",
-  //   rating: 8.8,
-  //   bonus: "200% op til 300 kr + 30 FS",
-  //   features: ["Lav Omsætning", "Reload Bonus", "24/7 Chat"],
-  //   url: "https://leovegas.com",
-  // },
+  {
+    rank: 3,
+    name: "Lucky Ones",
+    logo: "/betiton.png",
+    rating: 9.2,
+    bonus: "150% opp til 30 000 kr. + 200 FS",
+    features: ["Hurtige Udbetalinger", "VIP Program", "Gratis Spins"],
+    url: "https://jackpotcity.com",
+  },
+  {
+    rank: 4,
+    name: "Rolling slots",
+    logo: "/livescorebet.png",
+    rating: 9.0,
+    bonus: "260% opp til 19 500 kr. + 260 FS",
+    features: ["Mobil Casino", "Eksklusive Spil", "Sports Betting"],
+    url: "https://888casino.com",
+  },
+  {
+    rank: 5,
+    name: "Vegas Now",
+    logo: "/gold-casino.svg",
+    rating: 8.8,
+    bonus: "150% opp til 15 000 kr. + 200 FS",
+    features: ["Lav Omsætning", "Reload Bonus", "24/7 Chat"],
+    url: "https://leovegas.com",
+  },
 ]
 
 // Get top casino (rank 1)
