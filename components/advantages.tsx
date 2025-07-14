@@ -37,8 +37,8 @@ export function Advantages() {
             <div key={index} className="text-center">
               <div className={`inline-flex items-center justify-center w-4 sm:w-8 h-4 sm:h-8 mb-1 sm:mb-2`}>
                 {advantage.title === "Licenseret & Sikkert" ? (
-                  <div className="h-4 sm:h-8 w-4 sm:w-8 bg-red-600 rounded-sm flex items-center justify-center">
-                    <Image src="/flag.png" alt="Flag" width={16} height={16} />
+                  <div className="h-6 sm:h-8 w-6 sm:w-8 flex items-center justify-center">
+                    <Image src="/flag.png" alt="Flag" width={32} height={32} />
                   </div>
                 ) : (
                   <advantage.icon className={`h-4 sm:h-8 w-4 sm:w-8 ${advantage.color}`} />

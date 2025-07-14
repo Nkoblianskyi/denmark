@@ -70,8 +70,8 @@ export function CasinoModal() {
             <div className="mb-4 sm:mb-6">
               <p className="text-white text-sm sm:text-base mb-2 font-bold">BONUS</p>
               <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1">
-                <span className="text-white">100% op til </span>
-                <span className="text-yellow-400">1000 kr + 200 FS</span>
+                <span className="text-white">700% op til </span>
+                <span className="text-yellow-400">100 000 kr + 500 FS</span>
               </div>
             </div>
 
