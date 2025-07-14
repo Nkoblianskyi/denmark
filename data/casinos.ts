@@ -25,7 +25,7 @@ export const casinos: Casino[] = [
     name: "Betibet",
     logo: "/betsson.png",
     rating: 9.5,
-    bonus: "700% opp til 75 000 kr. + 725 FS",
+    bonus: "700% opp til 116 000 kr. + 725 FS",
     features: ["Crypto Betaling", "Ugentlige Bonus", "Live Support"],
     url: "https://spinpalace.com",
   },
