@@ -4,6 +4,7 @@ export interface Casino {
   logo: string
   rating: number
   bonus: string
+  bonusTwo: string
   features: string[]
   isTopChoice?: boolean
   url: string
@@ -15,7 +16,8 @@ export const casinos: Casino[] = [
     name: " Boomerang Bet",
     logo: "/boomerang-bet.svg",
     rating: 9.8,
-    bonus: "Velkomst bonus 700% opp til 116 000 kr. + 725 FS",
+    bonus: "Velkomst bonus 700% opp",
+    bonusTwo: 'til 100 000 kr. + 500 FS',
     features: ["Hurtige Udbetalinger", "Mobil App", "5% Cashback"],
     isTopChoice: true,
     url: "https://royalvegas.com",
@@ -26,6 +28,7 @@ export const casinos: Casino[] = [
     logo: "/betsson.png",
     rating: 9.5,
     bonus: "75% op til 750 kr + 100 FS",
+    bonusTwo: '',
     features: ["Crypto Betaling", "Ugentlige Bonus", "Live Support"],
     url: "https://spinpalace.com",
   },

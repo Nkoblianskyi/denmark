@@ -8,7 +8,7 @@ export function Header() {
         <div className="flex items-center justify-center">
           <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <Crown className="h-7 w-7 text-yellow-500" />
-            <span className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
+            <span className="text-sm font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
               Bedste Casinoer Danmark
             </span>
           </Link>

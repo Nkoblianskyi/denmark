@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://bedstecasinoerdanmark.com",
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

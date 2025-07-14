@@ -18,11 +18,10 @@ export function CasinoRankings() {
           {casinos.map((casino) => (
             <Card
               key={casino.rank}
-              className={`bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 relative overflow-hidden ${
-                casino.isTopChoice
+              className={`bg-gray-900 border-gray-800 cursor-pointer transition-all duration-200 relative overflow-hidden ${casino.isTopChoice
                   ? "ring-2 ring-yellow-400 shadow-lg shadow-red-500/20 bg-gradient-to-r from-gray-900 via-red-950/30 to-gray-900 hover:ring-yellow-300"
                   : "hover:border-red-900/50 hover:shadow-lg hover:shadow-red-500/10"
-              }`}
+                }`}
               onClick={() => handleCardClick(casino.url)}
             >
               <CardContent className="p-4">
@@ -61,7 +60,7 @@ export function CasinoRankings() {
                         <img
                           src={casino.logo || "/placeholder.svg"}
                           alt={`${casino.name} logo`}
-                          className="h-16 w-24 object-contain"
+                          className="h-24 w-28 object-contain"
                         />
                       </div>
                       <div className="flex items- justify-center gap-2 mt-2">
@@ -69,9 +68,8 @@ export function CasinoRankings() {
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className={`h-3 w-3 ${
-                                i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
-                              }`}
+                              className={`h-3 w-3 ${i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
+                                }`}
                             />
                           ))}
                         </div>
@@ -84,8 +82,13 @@ export function CasinoRankings() {
                       <div className="flex items-center justify-center gap-1 text-red-500 mb-2">
                         <span className="text-sm font-medium">BONUS</span>
                       </div>
-                      <div className="text-white font-bold text-xl leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
-                        {casino.bonus}
+                      <div>
+                        <div className="text-white font-bold text-[16px] leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
+                          {casino.bonus}
+                        </div>
+                        <div className="text-white font-bold text-[16px] leading-tight bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent p-2 rounded">
+                          {casino.bonusTwo}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -115,9 +118,8 @@ export function CasinoRankings() {
                     <div className="flex items-center gap-4 w-48">
                       {/* Rank */}
                       <div
-                        className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg ${
-                          casino.isTopChoice ? "bg-yellow-400 text-black" : "bg-red-800 text-white"
-                        } opacity-100 bg-opacity-100 relative z-10`}
+                        className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg ${casino.isTopChoice ? "bg-yellow-400 text-black" : "bg-red-800 text-white"
+                          } opacity-100 bg-opacity-100 relative z-10`}
                       >
                         {casino.rank}
                       </div>
@@ -139,9 +141,8 @@ export function CasinoRankings() {
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
-                                className={`h-4 w-4 ${
-                                  i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
-                                }`}
+                                className={`h-4 w-4 ${i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
+                                  }`}
                               />
                             ))}
                           </div>
@@ -200,9 +201,8 @@ export function CasinoRankings() {
                     <div className="flex items-center gap-6 w-72">
                       {/* Rank */}
                       <div
-                        className={`flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl ${
-                          casino.isTopChoice ? "bg-yellow-400 text-black" : "bg-red-800 text-white"
-                        } opacity-100 bg-opacity-100 relative z-10`}
+                        className={`flex items-center justify-center w-14 h-14 rounded-full font-bold text-xl ${casino.isTopChoice ? "bg-yellow-400 text-black" : "bg-red-800 text-white"
+                          } opacity-100 bg-opacity-100 relative z-10`}
                       >
                         {casino.rank}
                       </div>
@@ -224,9 +224,8 @@ export function CasinoRankings() {
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
-                                className={`h-5 w-5 ${
-                                  i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
-                                }`}
+                                className={`h-5 w-5 ${i < Math.floor(casino.rating) ? "text-yellow-500 fill-current" : "text-gray-600"
+                                  }`}
                               />
                             ))}
                           </div>
@@ -243,6 +242,7 @@ export function CasinoRankings() {
                           <span className="text-xl font-medium">BONUS</span>
                         </div>
                         <div className="text-white font-bold shadow-xl text-3xl leading-tight">{casino.bonus}</div>
+                        <div className="text-white font-bold shadow-xl text-3xl leading-tight">{casino.bonusTwo}</div>
                       </div>
                     </div>
 

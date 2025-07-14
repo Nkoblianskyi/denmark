@@ -33,7 +33,7 @@ export function CasinoModal() {
           <div
             className="relative text-black text-center py-3 px-4 sm:py-4 sm:px-8 font-black text-sm sm:text-base md:text-lg shadow-lg h-12 sm:h-14 md:h-16 flex items-center justify-center w-full"
             style={{
-              backgroundImage: "url('/images/ribbon-banner.png')",
+              backgroundImage: "url('/line.png')",
               backgroundSize: "100% 100%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -57,7 +57,7 @@ export function CasinoModal() {
           <CardContent className="p-4 sm:p-6 text-center bg-gray-900">
             {/* Logo */}
             <div className="mb-4 sm:mb-6 mt-3 sm:mt-4">
-              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-lg mx-auto w-fit">
+              <div className="rounded-lg p-3 sm:p-4 shadow-lg mx-auto w-fit">
                 <img
                   src={topCasino.logo || "/placeholder.svg"}
                   alt={`${topCasino.name} logo`}

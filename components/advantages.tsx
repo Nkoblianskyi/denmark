@@ -1,4 +1,5 @@
 import { Gift, CreditCard, Headphones, Shield } from "lucide-react"
+import Image from "next/image"
 
 export function Advantages() {
   const advantages = [
@@ -37,7 +38,7 @@ export function Advantages() {
               <div className={`inline-flex items-center justify-center w-4 sm:w-8 h-4 sm:h-8 mb-1 sm:mb-2`}>
                 {advantage.title === "Licenseret & Sikkert" ? (
                   <div className="h-4 sm:h-8 w-4 sm:w-8 bg-red-600 rounded-sm flex items-center justify-center">
-                    <span className="text-white text-xs sm:text-sm font-bold">DK</span>
+                    <Image src="/flag.png" alt="Flag" width={16} height={16} />
                   </div>
                 ) : (
                   <advantage.icon className={`h-4 sm:h-8 w-4 sm:w-8 ${advantage.color}`} />
